@@ -1,7 +1,7 @@
 import os
 import json
 import random
-from datetime import datetime
+from datetime import datetime, timedelta
 try:
     import yfinance as yf
     YFINANCE_AVAILABLE = True
