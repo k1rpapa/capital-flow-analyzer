@@ -219,7 +219,13 @@ def generate_analysis_data():
         else:
             ai_summary = f"マスター、年初来のマクロ循環データだ。AI集中から実需・分散へのシフトが鮮明だ。"
 
+        # 最終更新タイムスタンプの生成
+        now_jst = datetime.now().strftime("%Y-%m-%d %H:%M JST")
+        market_date_str = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+
         data_by_tf[tf] = {
+            "last_updated": now_jst,
+            "market_date": market_date_str,
             "nodes": nodes,
             "links": links,
             "sectors": sector_status,

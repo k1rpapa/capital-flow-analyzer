@@ -95,6 +95,12 @@ function renderDashboard(tf) {
 
     const tfData = currentData[tf];
 
+    // 0. 最新データ更新日時のバッジ表示
+    const badgeEl = document.getElementById("lastUpdatedBadge");
+    if (badgeEl && tfData.last_updated) {
+        badgeEl.innerText = `🕒 データ更新: ${tfData.last_updated} (市場確定日: ${tfData.market_date || '最新'})`;
+    }
+
     // 1. サンキーダイアグラムの描画
     renderSankey(tfData.nodes, tfData.links);
 

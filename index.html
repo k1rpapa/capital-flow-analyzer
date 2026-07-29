@@ -19,7 +19,10 @@
             <div class="logo-group">
                 <div class="logo-icon">⚡</div>
                 <div>
-                    <h1>CapitalFlow <span class="highlight">Analyzer</span></h1>
+                    <div class="title-row">
+                        <h1>CapitalFlow <span class="highlight">Analyzer</span></h1>
+                        <span class="last-updated-badge" id="lastUpdatedBadge">🕒 データ更新: 読込中...</span>
+                    </div>
                     <p class="subtitle">マクロ資金循環 ＆ 本物ロング vs ショートカバー解読エンジン</p>
                 </div>
             </div>
@@ -88,7 +91,7 @@
         <main class="manual-container card hidden" id="manualView">
             <div class="manual-header">
                 <h2>📖 CapitalFlow Analyzer 公式ガイド & 仕様書</h2>
-                <p>本アプリのコンセプト、判定ロジック、データ構造、使い方をわかりやすく解説します。</p>
+                <p>本アプリのコンセプト、判定ロジック、資金配分モデル、使い方をわかりやすく解説します。</p>
             </div>
 
             <div class="manual-sections">
@@ -127,20 +130,60 @@
                     </div>
                 </article>
 
-                <!-- Section 3: Data Sources & Architecture -->
+                <!-- Section 3: Allocation Logic (Enhanced for Friends) -->
                 <article class="manual-card">
-                    <h3>🛠️ 3. データソースと処理概要 (Architecture)</h3>
+                    <h3>🔀 3. サンキー・ダイアグラムの流出/流入マッチングロジック (配分モデル)</h3>
+                    <p>「どうやって資金の流出元と流入先を紐づけ、帯の太さを計算しているのか？」という疑問に分かりやすくお答えします。</p>
+                    
+                    <div class="logic-explanation">
+                        <div class="logic-step">
+                            <span class="step-num">①</span>
+                            <div>
+                                <strong>流出元 (左) と 流入先 (右) の振り分け</strong>
+                                <p>当日のリアル株価騰落率がマイナスのセクター（例: 半導体 SOXX -4.8%）を「資金の流出元」、プラスのセクター（例: SaaS IGV +4.3%）を「資金の流入先」として左右に配置します。</p>
+                            </div>
+                        </div>
+
+                        <div class="logic-step">
+                            <span class="step-num">②</span>
+                            <div>
+                                <strong>各セクターの総資金移動量 ($B) の算出</strong>
+                                <p><code>出来高 × 株価変動幅 × セクター時価総額スケール</code> から、そのセクターから「何億ドル流出したか（供給量）」「何億ドル流入したか（需要量）」を算出します。</p>
+                            </div>
+                        </div>
+
+                        <div class="logic-step">
+                            <span class="step-num">③</span>
+                            <div>
+                                <strong>比例配分マッチング (帯の太さの決定)</strong>
+                                <p>株式市場には「特定1株の移動タグ」は存在しないため、<strong>『流出側の総流出額』を『受け皿となる各流入セクターの規模（キャパシティ）』の比率に応じて比例配分（Proportional Matching）</strong>して帯の太さを算出します。</p>
+                                <p class="example-box">💡 <em>例: 半導体(SOXX)から$8.0B流出し、SaaS(IGV)が$4.0B、電力(XLU)が$4.0B受け取った場合、SOXXから両者へそれぞれ50%ずつ($4.0B)の太さのパイプで紐づけられます。</em></p>
+                            </div>
+                        </div>
+
+                        <div class="logic-step">
+                            <span class="step-num">④</span>
+                            <div>
+                                <strong>帯の「色（質）」の決定</strong>
+                                <p>パイプの色は、<strong>『資金が着地した側のセクターの4ファクト（OI変化・IV変化）』</strong>によって決まります。着地先で建玉(OI)が増えていれば🟢緑、建玉(OI)が減っていれば🟡黄色に自動彩色されます。</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Section 4: Data Sources & Architecture -->
+                <article class="manual-card">
+                    <h3>🛠️ 4. データソースと処理概要 (Architecture)</h3>
                     <ul class="manual-list">
                         <li><strong>リアル株価・騰落率:</strong> Yahoo Finance (`yfinance`) より毎朝の米国市場確定値を自動取得。</li>
                         <li><strong>自動バッチ処理 (GitHub Actions):</strong> 毎朝 JST 06:00 (日本時間) にクラウド上で自動起動し、最新データを全自動更新。</li>
                         <li><strong>日次自前DB蓄積 (`history.json`):</strong> 毎日データが蓄積され、過去データとの比較による100%本物の建玉(OI)差分率を自動算出。</li>
-                        <li><strong>サンキー・ダイアグラム配分モデル:</strong> 「流出セクターの売却規模」と「流入セクターの買付規模」の相互マッチング額から帯の太さ（$Billion）を算出。</li>
                     </ul>
                 </article>
 
-                <!-- Section 4: How to use -->
+                <!-- Section 5: How to use -->
                 <article class="manual-card">
-                    <h3>🎯 4. アプリの使い方・推奨ステップ</h3>
+                    <h3>🎯 5. アプリの使い方・推奨ステップ</h3>
                     <ol class="manual-steps">
                         <li><strong>ステップ1: 時間軸を設定する</strong><br>画面右上の `[当日 (1D)]` `[当週 (1W)]` `[当月 (1M)]` `[年初来 (YTD)]` タブを切り替え、デイトレノイズから大マクロトレンドまで見たい期間を選択。</li>
                         <li><strong>ステップ2: サンキー・ダイアグラムの「太さ」と「色」を見る</strong><br>帯の太さで資金移動規模（$B）を、帯の色で「🟢本物買い」か「🟡ショートカバー」か「🔴現金逃避」かを確認。</li>
