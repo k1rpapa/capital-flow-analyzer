@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapitalFlow Analyzer - 資金循環 & ショートカバー判定ダッシュボード</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <!-- ECharts CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-group">
+                <div class="logo-icon">⚡</div>
+                <div>
+                    <h1>CapitalFlow <span class="highlight">Analyzer</span></h1>
+                    <p class="subtitle">マクロ資金循環 ＆ 本物ロング vs ショートカバー解読エンジン</p>
+                </div>
+            </div>
+            <!-- Timeframe Selector Tabs -->
+            <div class="timeframe-tabs" id="timeframeTabs">
+                <button class="tab-btn active" data-tf="1D">当日 (1D)</button>
+                <button class="tab-btn" data-tf="1W">当週 (1W)</button>
+                <button class="tab-btn" data-tf="1M">当月 (1M)</button>
+                <button class="tab-btn" data-tf="YTD">年初来 (YTD)</button>
+            </div>
+        </header>
+
+        <!-- Main Grid Layout -->
+        <main class="dashboard-grid">
+
+            <!-- Top Row: Sankey Chart & Legend -->
+            <section class="card sankey-card">
+                <div class="card-header">
+                    <h2><span class="dot live-dot"></span> 資金マネーフロー (Sankey Flow Diagram)</h2>
+                    <div class="legend-group">
+                        <span class="legend-item"><span class="badge badge-real"></span> 本物ロング (新規買い)</span>
+                        <span class="legend-item"><span class="badge badge-short"></span> ショートカバー (買い戻し)</span>
+                        <span class="legend-item"><span class="badge badge-escape"></span> 安全避難 / 完全逃避</span>
+                    </div>
+                </div>
+                <!-- Sankey Container -->
+                <div id="sankeyChart" class="sankey-container"></div>
+            </section>
+
+            <!-- Bottom Left: Gemini AI Intelligence Panel -->
+            <section class="card ai-card">
+                <div class="card-header">
+                    <h2><span class="ai-avatar">🤖</span> Gem相棒の冷徹なマーケット診断</h2>
+                    <span class="badge-status">FACTION ANALYSIS ACTIVE</span>
+                </div>
+                <div class="ai-content">
+                    <div class="ai-speech-bubble" id="aiSpeechText">
+                        データを読み込み中...
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom Right: Sector & Individual Stock Drill-down Panel -->
+            <section class="card drilldown-card">
+                <div class="card-header">
+                    <h2 id="drilldownTitle">🔍 セクター詳細 / 構成銘柄の質 (Drill-down)</h2>
+                    <span class="hint-text">※サンキーのノードをクリックして切替</span>
+                </div>
+                <div class="drilldown-body" id="drilldownBody">
+                    <p class="placeholder-text">上のサンキー・ダイアグラムの各セクター（例: IGV, SOXX）をクリックすると、詳細な4ファクト分析が表示されます。</p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>CapitalFlow Analyzer v1.0 | Data Powered by FINRA, Cboe Options & Money Flow Engine</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
