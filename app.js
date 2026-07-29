@@ -30,8 +30,38 @@ async function loadData() {
     }
 }
 
-// イベントリスターの設定
+// イベントリスナーの設定
 function setupEventListeners() {
+    // 1. ダッシュボード vs マニュアル ビュー切替
+    const viewBtns = document.querySelectorAll("#viewTabs .nav-btn");
+    const dashboardView = document.getElementById("dashboardView");
+    const manualView = document.getElementById("manualView");
+    const timeframeTabs = document.getElementById("timeframeTabs");
+
+    viewBtns.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            viewBtns.forEach(b => b.classList.remove("active"));
+            e.target.classList.add("active");
+
+            const view = e.target.getAttribute("data-view");
+            if (view === "manual") {
+                dashboardView.classList.add("hidden");
+                manualView.classList.remove("hidden");
+                timeframeTabs.style.opacity = "0.3";
+                timeframeTabs.style.pointerEvents = "none";
+            } else {
+                manualView.classList.add("hidden");
+                dashboardView.classList.remove("hidden");
+                timeframeTabs.style.opacity = "1";
+                timeframeTabs.style.pointerEvents = "auto";
+                if (chartInstance) {
+                    chartInstance.resize();
+                }
+            }
+        });
+    });
+
+    // 2. タイムフレーム切替
     const tabs = document.querySelectorAll("#timeframeTabs .tab-btn");
     tabs.forEach(tab => {
         tab.addEventListener("click", (e) => {
@@ -43,7 +73,7 @@ function setupEventListeners() {
         });
     });
 
-    // サンキーノード/リンククリックイベント（ドリルダウン）
+    // 3. サンキーノード/リンククリックイベント（ドリルダウン）
     chartInstance.on("click", (params) => {
         if (params.dataType === "node") {
             const ticker = params.data.ticker;
@@ -79,7 +109,6 @@ function renderDashboard(tf) {
 
 // ECharts サンキーダイアグラムの描画
 function renderSankey(nodes, links) {
-    // ノードの色とスタイルのカスタマイズ
     const formattedNodes = nodes.map(n => ({
         name: n.name,
         ticker: n.ticker,
@@ -92,7 +121,6 @@ function renderSankey(nodes, links) {
         }
     }));
 
-    // リンク（帯）の色と透明度
     const formattedLinks = links.map(l => ({
         source: l.source,
         target: l.target,
@@ -167,7 +195,6 @@ function renderDrilldown(ticker) {
 
     titleEl.innerHTML = `🔍 判定詳細: <span style="color: #60A5FA;">${sectorInfo.name} (${ticker})</span>`;
 
-    // メトリクスカード HTML
     const priceColor = sectorInfo.price_change >= 0 ? "#10B981" : "#EF4444";
     const oiColor = sectorInfo.oi_change >= 0 ? "#10B981" : "#F59E0B";
 
@@ -192,7 +219,6 @@ function renderDrilldown(ticker) {
         </div>
     `;
 
-    // 構成個別銘柄テーブル HTML
     let tableRows = "";
     sectorInfo.components.forEach(comp => {
         const detail = tfData.stock_details[comp];

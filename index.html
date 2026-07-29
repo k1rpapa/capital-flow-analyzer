@@ -23,17 +23,26 @@
                     <p class="subtitle">マクロ資金循環 ＆ 本物ロング vs ショートカバー解読エンジン</p>
                 </div>
             </div>
-            <!-- Timeframe Selector Tabs -->
-            <div class="timeframe-tabs" id="timeframeTabs">
-                <button class="tab-btn active" data-tf="1D">当日 (1D)</button>
-                <button class="tab-btn" data-tf="1W">当週 (1W)</button>
-                <button class="tab-btn" data-tf="1M">当月 (1M)</button>
-                <button class="tab-btn" data-tf="YTD">年初来 (YTD)</button>
+            
+            <div class="header-controls">
+                <!-- Navigation Tabs (Dashboard vs Manual) -->
+                <div class="view-tabs" id="viewTabs">
+                    <button class="nav-btn active" data-view="dashboard">📊 ダッシュボード</button>
+                    <button class="nav-btn" data-view="manual">📖 マニュアル & コンセプト</button>
+                </div>
+
+                <!-- Timeframe Selector Tabs -->
+                <div class="timeframe-tabs" id="timeframeTabs">
+                    <button class="tab-btn active" data-tf="1D">当日 (1D)</button>
+                    <button class="tab-btn" data-tf="1W">当週 (1W)</button>
+                    <button class="tab-btn" data-tf="1M">当月 (1M)</button>
+                    <button class="tab-btn" data-tf="YTD">年初来 (YTD)</button>
+                </div>
             </div>
         </header>
 
-        <!-- Main Grid Layout -->
-        <main class="dashboard-grid">
+        <!-- Main Dashboard View -->
+        <main class="dashboard-grid" id="dashboardView">
 
             <!-- Top Row: Sankey Chart & Legend -->
             <section class="card sankey-card">
@@ -73,6 +82,73 @@
                 </div>
             </section>
 
+        </main>
+
+        <!-- Manual & Concept View (Hidden by default) -->
+        <main class="manual-container card hidden" id="manualView">
+            <div class="manual-header">
+                <h2>📖 CapitalFlow Analyzer 公式ガイド & 仕様書</h2>
+                <p>本アプリのコンセプト、判定ロジック、データ構造、使い方をわかりやすく解説します。</p>
+            </div>
+
+            <div class="manual-sections">
+                <!-- Section 1: Concept -->
+                <article class="manual-card">
+                    <h3>💡 1. 開発コンセプト（なぜこのアプリを作ったのか？）</h3>
+                    <p>
+                        株式相場において、売られすぎていた銘柄やセクターが突如＋5%〜＋10%と跳ね上がった際、それが<strong>「底打ちした本物の買い（化け物）」</strong>なのか、それとも捕まっていた空売り筋が悲鳴をあげて一時的に買い戻しただけの<strong>「ショートカバーの罠（幽霊）」</strong>なのかを見極めることは、投資家にとって最も重要です。
+                    </p>
+                    <p>
+                        また、「AIバブル崩壊」などの相場転換期において、AIインフラ（半導体等）から抜けた莫大な資金が、どこへどんな理由で移動しているのか（セクターローテーションの真偽）を、<strong>感情ではなく『冷徹なファクト（データ）』で透明化・可視化すること</strong>を目的に作られました。
+                    </p>
+                </article>
+
+                <!-- Section 2: 4 Facts Quality Engine -->
+                <article class="manual-card">
+                    <h3>📊 2. 資金の「質」を解読する4つの決定指標 (4-Fact Quality Engine)</h3>
+                    <p>プロのデスクが分析に用いる4つのデータ（ファクト）を組み合わせ、資金の質を3つに色分け分類しています。</p>
+                    
+                    <div class="fact-grid">
+                        <div class="fact-box fact-real">
+                            <span class="fact-tag bg-real">🟢 本物ロング (REAL_BUY)</span>
+                            <h4>【価格上昇 ＋ 建玉(OI)増加 ＋ IV安定】</h4>
+                            <p>市場に新しい新規資金が流入し、持続的な買集めが行われている状態。本物の強気トレンド。</p>
+                        </div>
+                        <div class="fact-box fact-short">
+                            <span class="fact-tag bg-short">🟡 ショートカバー (SHORT_COVER)</span>
+                            <h4>【価格上昇 ＋ 建玉(OI)減少 ＋ IV上昇】</h4>
+                            <p>空売り筋が恐怖に耐えかねて損切り買い戻しを行い、ポジション（建玉）を消滅させているだけの罠。長続きしない。</p>
+                        </div>
+                        <div class="fact-box fact-escape">
+                            <span class="fact-tag bg-short-new">🔴 安全避難 / リスクオフ (SAFE_HAVEN)</span>
+                            <h4>【株セクター流出 ＋ 現金/国債Inflow】</h4>
+                            <p>株を買い替えるのではなく、株式市場から現金（SGOV）や米国債（TLT）、金（GLD）へ完全に逃亡している状態。</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Section 3: Data Sources & Architecture -->
+                <article class="manual-card">
+                    <h3>🛠️ 3. データソースと処理概要 (Architecture)</h3>
+                    <ul class="manual-list">
+                        <li><strong>リアル株価・騰落率:</strong> Yahoo Finance (`yfinance`) より毎朝の米国市場確定値を自動取得。</li>
+                        <li><strong>自動バッチ処理 (GitHub Actions):</strong> 毎朝 JST 06:00 (日本時間) にクラウド上で自動起動し、最新データを全自動更新。</li>
+                        <li><strong>日次自前DB蓄積 (`history.json`):</strong> 毎日データが蓄積され、過去データとの比較による100%本物の建玉(OI)差分率を自動算出。</li>
+                        <li><strong>サンキー・ダイアグラム配分モデル:</strong> 「流出セクターの売却規模」と「流入セクターの買付規模」の相互マッチング額から帯の太さ（$Billion）を算出。</li>
+                    </ul>
+                </article>
+
+                <!-- Section 4: How to use -->
+                <article class="manual-card">
+                    <h3>🎯 4. アプリの使い方・推奨ステップ</h3>
+                    <ol class="manual-steps">
+                        <li><strong>ステップ1: 時間軸を設定する</strong><br>画面右上の `[当日 (1D)]` `[当週 (1W)]` `[当月 (1M)]` `[年初来 (YTD)]` タブを切り替え、デイトレノイズから大マクロトレンドまで見たい期間を選択。</li>
+                        <li><strong>ステップ2: サンキー・ダイアグラムの「太さ」と「色」を見る</strong><br>帯の太さで資金移動規模（$B）を、帯の色で「🟢本物買い」か「🟡ショートカバー」か「🔴現金逃避」かを確認。</li>
+                        <li><strong>ステップ3: Gem相棒の冷徹な解説を読む</strong><br>左下のAIカードで、プロのデスク目線で解読された「今飛びつくべきか、様子を見るべきか」の相場診断をチェック。</li>
+                        <li><strong>ステップ4: 各セクターノードをクリックしてドリルダウン</strong><br>サンキー上の各セクター（例: IGV, SOXX）をクリックし、右下パネルで構成銘柄（WDAY, CRM, NVDA等）の個別ファクト内訳を調査！</li>
+                    </ol>
+                </article>
+            </div>
         </main>
 
         <!-- Footer -->
