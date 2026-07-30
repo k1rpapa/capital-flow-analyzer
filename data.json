@@ -1,28 +1,28 @@
 {
   "1D": {
-    "last_updated": "2026-07-30 07:02 JST",
-    "market_date": "2026-07-29",
+    "last_updated": "2026-07-31 06:21 JST",
+    "market_date": "2026-07-30",
     "nodes": [
       {
         "name": "半導体・AI (SOXX)",
         "ticker": "SOXX",
-        "price_change": -5.38,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316"
+        "price_change": 8.5,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
       },
       {
         "name": "メガテック・IT (XLK)",
         "ticker": "XLK",
-        "price_change": -2.64,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444"
+        "price_change": 5.5,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
       },
       {
         "name": "SaaS・ソフト (IGV)",
         "ticker": "IGV",
-        "price_change": 0.64,
+        "price_change": 1.02,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー（空売りの買い戻し）",
         "quality_color": "#F59E0B"
@@ -30,7 +30,7 @@
       {
         "name": "ヘルスケア (XLV)",
         "ticker": "XLV",
-        "price_change": -0.61,
+        "price_change": -1.64,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート殺到",
         "quality_color": "#EF4444"
@@ -38,23 +38,23 @@
       {
         "name": "生活必需品 (XLP)",
         "ticker": "XLP",
-        "price_change": 0.34,
-        "quality": "REAL_BUY",
-        "quality_label": "本物のロング（買い集め）",
-        "quality_color": "#10B981"
+        "price_change": -2.16,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444"
       },
       {
         "name": "金融 (XLF)",
         "ticker": "XLF",
-        "price_change": -1.6,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316"
+        "price_change": 0.56,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
       },
       {
         "name": "公益・電力インフラ (XLU)",
         "ticker": "XLU",
-        "price_change": -1.34,
+        "price_change": -0.56,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート殺到",
         "quality_color": "#EF4444"
@@ -62,23 +62,23 @@
       {
         "name": "中小型株 (IWM)",
         "ticker": "IWM",
-        "price_change": -1.64,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444"
-      },
-      {
-        "name": "エネルギー (XLE)",
-        "ticker": "XLE",
-        "price_change": 1.88,
+        "price_change": 1.39,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー（空売りの買い戻し）",
         "quality_color": "#F59E0B"
       },
       {
+        "name": "エネルギー (XLE)",
+        "ticker": "XLE",
+        "price_change": 0.53,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981"
+      },
+      {
         "name": "米国20年超国債 (TLT)",
         "ticker": "TLT",
-        "price_change": -1.65,
+        "price_change": -0.06,
         "quality": "LONG_UNWIND",
         "quality_label": "ロング投げ売り・利確",
         "quality_color": "#F97316"
@@ -86,7 +86,7 @@
       {
         "name": "現金・短期債 (SGOV)",
         "ticker": "SGOV",
-        "price_change": 0.02,
+        "price_change": 0.01,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー（空売りの買い戻し）",
         "quality_color": "#F59E0B"
@@ -94,7 +94,7 @@
       {
         "name": "金 (Gold) (GLD)",
         "ticker": "GLD",
-        "price_change": 0.46,
+        "price_change": 1.64,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー（空売りの買い戻し）",
         "quality_color": "#F59E0B"
@@ -102,225 +102,169 @@
     ],
     "links": [
       {
-        "source": "半導体・AI (SOXX)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 0.44,
+        "source": "ヘルスケア (XLV)",
+        "target": "半導体・AI (SOXX)",
+        "value": 0.88,
         "quality": "SHORT_COVER",
         "quality_color": "#F59E0B",
         "quality_label": "ショートカバー（空売りの買い戻し）"
       },
       {
-        "source": "半導体・AI (SOXX)",
-        "target": "生活必需品 (XLP)",
-        "value": 0.19,
+        "source": "ヘルスケア (XLV)",
+        "target": "メガテック・IT (XLK)",
+        "value": 1.0,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "SaaS・ソフト (IGV)",
+        "value": 0.67,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "金融 (XLF)",
+        "value": 0.32,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "中小型株 (IWM)",
+        "value": 0.81,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "エネルギー (XLE)",
+        "value": 0.33,
         "quality": "REAL_BUY",
         "quality_color": "#10B981",
         "quality_label": "本物のロング（買い集め）"
       },
       {
-        "source": "半導体・AI (SOXX)",
-        "target": "エネルギー (XLE)",
-        "value": 0.9,
+        "source": "ヘルスケア (XLV)",
+        "target": "金 (Gold) (GLD)",
+        "value": 0.76,
         "quality": "SHORT_COVER",
         "quality_color": "#F59E0B",
         "quality_label": "ショートカバー（空売りの買い戻し）"
       },
       {
-        "source": "半導体・AI (SOXX)",
+        "source": "生活必需品 (XLP)",
+        "target": "半導体・AI (SOXX)",
+        "value": 1.03,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "メガテック・IT (XLK)",
+        "value": 1.0,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "SaaS・ソフト (IGV)",
+        "value": 0.63,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "金融 (XLF)",
+        "value": 0.31,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "中小型株 (IWM)",
+        "value": 0.75,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "エネルギー (XLE)",
+        "value": 0.28,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
         "target": "金 (Gold) (GLD)",
+        "value": 0.94,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "半導体・AI (SOXX)",
+        "value": 0.31,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "メガテック・IT (XLK)",
+        "value": 0.34,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "SaaS・ソフト (IGV)",
+        "value": 0.32,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "金融 (XLF)",
         "value": 0.26,
         "quality": "SHORT_COVER",
         "quality_color": "#F59E0B",
         "quality_label": "ショートカバー（空売りの買い戻し）"
       },
       {
-        "source": "メガテック・IT (XLK)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 0.33,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "生活必需品 (XLP)",
-        "value": 0.23,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "エネルギー (XLE)",
-        "value": 1.1,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "金 (Gold) (GLD)",
-        "value": 0.31,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "ヘルスケア (XLV)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 0.38,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "ヘルスケア (XLV)",
-        "target": "生活必需品 (XLP)",
-        "value": 0.18,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "ヘルスケア (XLV)",
-        "target": "エネルギー (XLE)",
-        "value": 0.42,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "ヘルスケア (XLV)",
-        "target": "金 (Gold) (GLD)",
-        "value": 0.31,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 0.3,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "生活必需品 (XLP)",
-        "value": 0.23,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "エネルギー (XLE)",
-        "value": 0.84,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "金 (Gold) (GLD)",
-        "value": 0.28,
+        "source": "公益・電力インフラ (XLU)",
+        "target": "中小型株 (IWM)",
+        "value": 0.36,
         "quality": "SHORT_COVER",
         "quality_color": "#F59E0B",
         "quality_label": "ショートカバー（空売りの買い戻し）"
       },
       {
         "source": "公益・電力インフラ (XLU)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 0.29,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "公益・電力インフラ (XLU)",
-        "target": "生活必需品 (XLP)",
-        "value": 0.19,
+        "target": "エネルギー (XLE)",
+        "value": 0.37,
         "quality": "REAL_BUY",
         "quality_color": "#10B981",
         "quality_label": "本物のロング（買い集め）"
       },
       {
         "source": "公益・電力インフラ (XLU)",
-        "target": "エネルギー (XLE)",
-        "value": 0.84,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "公益・電力インフラ (XLU)",
-        "target": "金 (Gold) (GLD)",
-        "value": 0.29,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 0.29,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "生活必需品 (XLP)",
-        "value": 0.18,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "エネルギー (XLE)",
-        "value": 0.89,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "中小型株 (IWM)",
         "target": "金 (Gold) (GLD)",
         "value": 0.27,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 0.33,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "生活必需品 (XLP)",
-        "value": 0.23,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "エネルギー (XLE)",
-        "value": 0.78,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "金 (Gold) (GLD)",
-        "value": 0.23,
         "quality": "SHORT_COVER",
         "quality_color": "#F59E0B",
         "quality_label": "ショートカバー（空売りの買い戻し）"
@@ -329,14 +273,14 @@
     "sectors": {
       "SOXX": {
         "name": "半導体・AI",
-        "price_change": -5.38,
+        "price_change": 8.5,
         "oi_change": -4.3,
         "iv_change": 6.2,
         "short_vol_ratio": 61.6,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316",
-        "estimated_flow": 9.68,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 15.3,
         "components": [
           "NVDA",
           "AVGO",
@@ -346,14 +290,14 @@
       },
       "XLK": {
         "name": "メガテック・IT",
-        "price_change": -2.64,
-        "oi_change": 1.9,
-        "iv_change": 2.6,
-        "short_vol_ratio": 50.9,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444",
-        "estimated_flow": 4.75,
+        "price_change": 5.5,
+        "oi_change": -0.1,
+        "iv_change": 0.6,
+        "short_vol_ratio": 42.5,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 9.9,
         "components": [
           "AAPL",
           "MSFT",
@@ -363,14 +307,14 @@
       },
       "IGV": {
         "name": "SaaS・ソフト",
-        "price_change": 0.64,
+        "price_change": 1.02,
         "oi_change": -3.7,
         "iv_change": 5.8,
         "short_vol_ratio": 45.7,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー（空売りの買い戻し）",
         "quality_color": "#F59E0B",
-        "estimated_flow": 1.15,
+        "estimated_flow": 1.84,
         "components": [
           "CRM",
           "WDAY",
@@ -381,14 +325,14 @@
       },
       "XLV": {
         "name": "ヘルスケア",
-        "price_change": -0.61,
+        "price_change": -1.64,
         "oi_change": 4.1,
         "iv_change": -1.2,
         "short_vol_ratio": 32.5,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート殺到",
         "quality_color": "#EF4444",
-        "estimated_flow": 1.1,
+        "estimated_flow": 2.95,
         "components": [
           "LLY",
           "UNH",
@@ -398,14 +342,14 @@
       },
       "XLP": {
         "name": "生活必需品",
-        "price_change": 0.34,
-        "oi_change": 1.9,
-        "iv_change": -0.1,
-        "short_vol_ratio": 50.7,
-        "quality": "REAL_BUY",
-        "quality_label": "本物のロング（買い集め）",
-        "quality_color": "#10B981",
-        "estimated_flow": 0.61,
+        "price_change": -2.16,
+        "oi_change": 0.7,
+        "iv_change": 0.8,
+        "short_vol_ratio": 48.4,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444",
+        "estimated_flow": 3.89,
         "components": [
           "PG",
           "COST",
@@ -415,14 +359,14 @@
       },
       "XLF": {
         "name": "金融",
-        "price_change": -1.6,
-        "oi_change": -1.9,
-        "iv_change": 1.5,
-        "short_vol_ratio": 50.3,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316",
-        "estimated_flow": 2.88,
+        "price_change": 0.56,
+        "oi_change": 0.8,
+        "iv_change": 2.8,
+        "short_vol_ratio": 38.5,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 1.01,
         "components": [
           "JPM",
           "BAC",
@@ -432,14 +376,14 @@
       },
       "XLU": {
         "name": "公益・電力インフラ",
-        "price_change": -1.34,
+        "price_change": -0.56,
         "oi_change": 4.7,
         "iv_change": -1.2,
         "short_vol_ratio": 32.5,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート殺到",
         "quality_color": "#EF4444",
-        "estimated_flow": 2.41,
+        "estimated_flow": 1.01,
         "components": [
           "NEE",
           "CEG",
@@ -449,28 +393,28 @@
       },
       "IWM": {
         "name": "中小型株",
-        "price_change": -1.64,
-        "oi_change": 1.0,
-        "iv_change": 0.2,
-        "short_vol_ratio": 48.4,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444",
-        "estimated_flow": 2.95,
+        "price_change": 1.39,
+        "oi_change": -2.4,
+        "iv_change": -1.0,
+        "short_vol_ratio": 45.3,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 2.5,
         "components": [
           "IWM"
         ]
       },
       "XLE": {
         "name": "エネルギー",
-        "price_change": 1.88,
-        "oi_change": -0.8,
-        "iv_change": -0.8,
-        "short_vol_ratio": 50.9,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B",
-        "estimated_flow": 3.38,
+        "price_change": 0.53,
+        "oi_change": 1.2,
+        "iv_change": -1.1,
+        "short_vol_ratio": 51.0,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981",
+        "estimated_flow": 0.95,
         "components": [
           "XOM",
           "CVX",
@@ -479,42 +423,42 @@
       },
       "TLT": {
         "name": "米国20年超国債",
-        "price_change": -1.65,
+        "price_change": -0.06,
         "oi_change": -1.7,
-        "iv_change": 1.8,
-        "short_vol_ratio": 43.8,
+        "iv_change": -0.1,
+        "short_vol_ratio": 42.8,
         "quality": "LONG_UNWIND",
         "quality_label": "ロング投げ売り・利確",
         "quality_color": "#F97316",
-        "estimated_flow": 2.97,
+        "estimated_flow": 0.11,
         "components": [
           "TLT"
         ]
       },
       "SGOV": {
         "name": "現金・短期債",
-        "price_change": 0.02,
-        "oi_change": -0.4,
-        "iv_change": 1.3,
-        "short_vol_ratio": 40.0,
+        "price_change": 0.01,
+        "oi_change": -2.9,
+        "iv_change": 0.7,
+        "short_vol_ratio": 46.4,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー（空売りの買い戻し）",
         "quality_color": "#F59E0B",
-        "estimated_flow": 0.04,
+        "estimated_flow": 0.02,
         "components": [
           "SGOV"
         ]
       },
       "GLD": {
         "name": "金 (Gold)",
-        "price_change": 0.46,
-        "oi_change": -2.0,
-        "iv_change": -1.7,
-        "short_vol_ratio": 38.9,
+        "price_change": 1.64,
+        "oi_change": -0.3,
+        "iv_change": -0.8,
+        "short_vol_ratio": 39.6,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー（空売りの買い戻し）",
         "quality_color": "#F59E0B",
-        "estimated_flow": 0.83,
+        "estimated_flow": 2.95,
         "components": [
           "GLD"
         ]
@@ -523,215 +467,1909 @@
     "stock_details": {
       "NVDA": {
         "sector": "XLK",
-        "price_change": -3.55,
-        "oi_change": 2.1,
-        "iv_change": 3.2,
-        "short_vol_ratio": 52.4,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
+        "price_change": 2.65,
+        "oi_change": 0.1,
+        "iv_change": 0.2,
+        "short_vol_ratio": 44.3,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
       },
       "AVGO": {
         "sector": "XLK",
-        "price_change": -2.78,
-        "oi_change": 1.0,
-        "iv_change": 1.9,
-        "short_vol_ratio": 51.1,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
+        "price_change": 4.73,
+        "oi_change": -0.4,
+        "iv_change": 1.0,
+        "short_vol_ratio": 44.0,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
       },
       "AMD": {
         "sector": "SOXX",
-        "price_change": -5.51,
-        "oi_change": -4.6,
-        "iv_change": 5.7,
-        "short_vol_ratio": 61.3,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
+        "price_change": 13.0,
+        "oi_change": -5.2,
+        "iv_change": 5.6,
+        "short_vol_ratio": 60.6,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
       },
       "TSM": {
         "sector": "SOXX",
-        "price_change": -4.5,
-        "oi_change": -3.4,
-        "iv_change": 6.2,
-        "short_vol_ratio": 61.7,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
+        "price_change": 7.64,
+        "oi_change": -4.6,
+        "iv_change": 7.2,
+        "short_vol_ratio": 63.4,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
       },
       "AAPL": {
         "sector": "XLK",
-        "price_change": -0.56,
-        "oi_change": 2.1,
-        "iv_change": 2.3,
-        "short_vol_ratio": 50.0,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
+        "price_change": -1.41,
+        "oi_change": -0.1,
+        "iv_change": 0.6,
+        "short_vol_ratio": 41.2,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
       },
       "MSFT": {
         "sector": "XLK",
-        "price_change": -0.71,
-        "oi_change": 2.3,
-        "iv_change": 2.4,
-        "short_vol_ratio": 51.1,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
+        "price_change": 15.51,
+        "oi_change": -0.1,
+        "iv_change": 1.1,
+        "short_vol_ratio": 42.3,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
       },
       "CRM": {
         "sector": "IGV",
-        "price_change": 3.79,
-        "oi_change": -3.8,
-        "iv_change": 4.9,
-        "short_vol_ratio": 46.0,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
+        "price_change": -4.07,
+        "oi_change": -3.3,
+        "iv_change": 6.6,
+        "short_vol_ratio": 47.1,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
       },
       "WDAY": {
         "sector": "IGV",
-        "price_change": 5.21,
-        "oi_change": -3.5,
-        "iv_change": 5.6,
-        "short_vol_ratio": 46.8,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
+        "price_change": -5.89,
+        "oi_change": -4.0,
+        "iv_change": 6.6,
+        "short_vol_ratio": 44.3,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
       },
       "DDOG": {
         "sector": "IGV",
-        "price_change": 5.31,
-        "oi_change": -3.4,
-        "iv_change": 5.4,
-        "short_vol_ratio": 44.7,
+        "price_change": 1.65,
+        "oi_change": -3.3,
+        "iv_change": 6.6,
+        "short_vol_ratio": 45.9,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー"
       },
       "NET": {
         "sector": "IGV",
-        "price_change": 2.38,
-        "oi_change": -3.9,
-        "iv_change": 5.6,
-        "short_vol_ratio": 45.3,
+        "price_change": 4.81,
+        "oi_change": -4.3,
+        "iv_change": 6.7,
+        "short_vol_ratio": 43.9,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー"
       },
       "TEAM": {
         "sector": "IGV",
-        "price_change": 4.3,
-        "oi_change": -3.2,
-        "iv_change": 6.1,
-        "short_vol_ratio": 45.5,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
+        "price_change": -5.91,
+        "oi_change": -3.1,
+        "iv_change": 6.6,
+        "short_vol_ratio": 46.6,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
       },
       "LLY": {
         "sector": "XLV",
-        "price_change": -0.87,
-        "oi_change": 3.5,
-        "iv_change": -1.4,
-        "short_vol_ratio": 33.6,
+        "price_change": -4.55,
+        "oi_change": 3.9,
+        "iv_change": -1.5,
+        "short_vol_ratio": 30.8,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート"
       },
       "UNH": {
         "sector": "XLV",
-        "price_change": -1.92,
-        "oi_change": 3.8,
-        "iv_change": -1.9,
-        "short_vol_ratio": 33.5,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
+        "price_change": 0.21,
+        "oi_change": 3.7,
+        "iv_change": -0.6,
+        "short_vol_ratio": 31.9,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
       },
       "JNJ": {
         "sector": "XLV",
-        "price_change": -0.45,
-        "oi_change": 4.0,
-        "iv_change": -0.4,
-        "short_vol_ratio": 34.3,
+        "price_change": -3.66,
+        "oi_change": 3.7,
+        "iv_change": -1.4,
+        "short_vol_ratio": 34.2,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート"
       },
       "PFE": {
         "sector": "XLV",
-        "price_change": -0.4,
-        "oi_change": 4.4,
-        "iv_change": -2.0,
-        "short_vol_ratio": 31.0,
+        "price_change": -0.95,
+        "oi_change": 4.6,
+        "iv_change": -0.8,
+        "short_vol_ratio": 30.6,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート"
       },
       "PG": {
         "sector": "XLP",
-        "price_change": -1.87,
-        "oi_change": 1.6,
-        "iv_change": 0.8,
-        "short_vol_ratio": 52.6,
+        "price_change": -1.46,
+        "oi_change": 1.3,
+        "iv_change": 0.6,
+        "short_vol_ratio": 48.8,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート"
       },
       "COST": {
         "sector": "XLP",
-        "price_change": 0.77,
-        "oi_change": 1.6,
-        "iv_change": -0.2,
-        "short_vol_ratio": 52.4,
-        "quality": "REAL_BUY",
-        "quality_label": "本物ロング"
+        "price_change": -2.04,
+        "oi_change": 0.4,
+        "iv_change": 1.3,
+        "short_vol_ratio": 49.7,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
       },
       "KO": {
         "sector": "XLP",
-        "price_change": 0.92,
-        "oi_change": 1.1,
-        "iv_change": -0.4,
-        "short_vol_ratio": 49.9,
-        "quality": "REAL_BUY",
-        "quality_label": "本物ロング"
+        "price_change": -0.66,
+        "oi_change": 0.0,
+        "iv_change": 0.4,
+        "short_vol_ratio": 48.1,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
       },
       "PEP": {
         "sector": "XLP",
-        "price_change": 0.45,
-        "oi_change": 2.0,
+        "price_change": -2.3,
+        "oi_change": 0.9,
         "iv_change": 0.1,
+        "short_vol_ratio": 48.7,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "JPM": {
+        "sector": "XLF",
+        "price_change": 1.78,
+        "oi_change": 1.4,
+        "iv_change": 3.8,
+        "short_vol_ratio": 37.9,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "BAC": {
+        "sector": "XLF",
+        "price_change": 1.08,
+        "oi_change": 1.4,
+        "iv_change": 3.0,
+        "short_vol_ratio": 39.7,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "BRK.B": {
+        "sector": "XLF",
+        "price_change": 0.1,
+        "oi_change": 0.6,
+        "iv_change": 3.3,
+        "short_vol_ratio": 38.4,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "C": {
+        "sector": "XLF",
+        "price_change": 4.08,
+        "oi_change": 1.1,
+        "iv_change": 3.7,
+        "short_vol_ratio": 36.9,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "NEE": {
+        "sector": "XLU",
+        "price_change": -0.6,
+        "oi_change": 4.0,
+        "iv_change": -1.0,
+        "short_vol_ratio": 30.5,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "CEG": {
+        "sector": "XLU",
+        "price_change": 2.17,
+        "oi_change": 4.2,
+        "iv_change": -1.5,
+        "short_vol_ratio": 31.0,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
+      },
+      "DUK": {
+        "sector": "XLU",
+        "price_change": -2.18,
+        "oi_change": 4.7,
+        "iv_change": -0.6,
+        "short_vol_ratio": 31.3,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "AEP": {
+        "sector": "XLU",
+        "price_change": -1.25,
+        "oi_change": 3.8,
+        "iv_change": -0.9,
+        "short_vol_ratio": 31.8,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "IWM": {
+        "sector": "IWM",
+        "price_change": 1.39,
+        "oi_change": -2.7,
+        "iv_change": -1.2,
+        "short_vol_ratio": 44.2,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "XOM": {
+        "sector": "XLE",
+        "price_change": 0.14,
+        "oi_change": 2.0,
+        "iv_change": -0.3,
+        "short_vol_ratio": 52.2,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
+      },
+      "CVX": {
+        "sector": "XLE",
+        "price_change": 0.23,
+        "oi_change": 0.6,
+        "iv_change": -0.2,
+        "short_vol_ratio": 50.0,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
+      },
+      "COP": {
+        "sector": "XLE",
+        "price_change": 0.82,
+        "oi_change": 1.1,
+        "iv_change": -1.7,
+        "short_vol_ratio": 52.3,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
+      },
+      "TLT": {
+        "sector": "TLT",
+        "price_change": -0.06,
+        "oi_change": -1.6,
+        "iv_change": -0.2,
+        "short_vol_ratio": 42.5,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
+      },
+      "SGOV": {
+        "sector": "SGOV",
+        "price_change": 0.01,
+        "oi_change": -3.0,
+        "iv_change": 0.8,
+        "short_vol_ratio": 46.3,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "GLD": {
+        "sector": "GLD",
+        "price_change": 1.64,
+        "oi_change": -0.3,
+        "iv_change": -0.0,
+        "short_vol_ratio": 41.5,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      }
+    },
+    "ai_summary": "マスター、昨晩の相場動向を冷徹に分析したぜ。\nSOXX（半導体）が +8.5% と急落し、巨大な資金流出が確認された！一方でSaaS（IGV: +1.02%, 建玉OI: -3.7%）の上昇は【ショートカバー（空売りの買い戻し）】だ。\n建玉(OI)が減退しており、空売りの悲鳴（買い戻し）に過ぎない。本物の買いが集まっているのはヘルスケア（XLV: 建玉OI +4.1%）および電力（XLU: 建玉OI +4.7%）だ！"
+  },
+  "1W": {
+    "last_updated": "2026-07-31 06:21 JST",
+    "market_date": "2026-07-30",
+    "nodes": [
+      {
+        "name": "半導体・AI (SOXX)",
+        "ticker": "SOXX",
+        "price_change": 15.3,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
+      },
+      {
+        "name": "メガテック・IT (XLK)",
+        "ticker": "XLK",
+        "price_change": 9.9,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
+      },
+      {
+        "name": "SaaS・ソフト (IGV)",
+        "ticker": "IGV",
+        "price_change": 1.84,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
+      },
+      {
+        "name": "ヘルスケア (XLV)",
+        "ticker": "XLV",
+        "price_change": -2.95,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444"
+      },
+      {
+        "name": "生活必需品 (XLP)",
+        "ticker": "XLP",
+        "price_change": -3.89,
+        "quality": "LONG_UNWIND",
+        "quality_label": "ロング投げ売り・利確",
+        "quality_color": "#F97316"
+      },
+      {
+        "name": "金融 (XLF)",
+        "ticker": "XLF",
+        "price_change": 1.01,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981"
+      },
+      {
+        "name": "公益・電力インフラ (XLU)",
+        "ticker": "XLU",
+        "price_change": -1.01,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444"
+      },
+      {
+        "name": "中小型株 (IWM)",
+        "ticker": "IWM",
+        "price_change": 2.5,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
+      },
+      {
+        "name": "エネルギー (XLE)",
+        "ticker": "XLE",
+        "price_change": 0.95,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981"
+      },
+      {
+        "name": "米国20年超国債 (TLT)",
+        "ticker": "TLT",
+        "price_change": -0.11,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444"
+      },
+      {
+        "name": "現金・短期債 (SGOV)",
+        "ticker": "SGOV",
+        "price_change": 0.02,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981"
+      },
+      {
+        "name": "金 (Gold) (GLD)",
+        "ticker": "GLD",
+        "price_change": 2.95,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
+      }
+    ],
+    "links": [
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "半導体・AI (SOXX)",
+        "value": 4.6,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "メガテック・IT (XLK)",
+        "value": 5.26,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "SaaS・ソフト (IGV)",
+        "value": 3.58,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "金融 (XLF)",
+        "value": 1.79,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "中小型株 (IWM)",
+        "value": 3.16,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "エネルギー (XLE)",
+        "value": 1.8,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "金 (Gold) (GLD)",
+        "value": 5.24,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "半導体・AI (SOXX)",
+        "value": 6.45,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "メガテック・IT (XLK)",
+        "value": 6.73,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "SaaS・ソフト (IGV)",
+        "value": 2.46,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "金融 (XLF)",
+        "value": 1.56,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "中小型株 (IWM)",
+        "value": 3.45,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "エネルギー (XLE)",
+        "value": 1.65,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "金 (Gold) (GLD)",
+        "value": 4.29,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "半導体・AI (SOXX)",
+        "value": 1.96,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "メガテック・IT (XLK)",
+        "value": 1.78,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "SaaS・ソフト (IGV)",
+        "value": 1.48,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "金融 (XLF)",
+        "value": 1.91,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "中小型株 (IWM)",
+        "value": 1.44,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "エネルギー (XLE)",
+        "value": 1.41,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "金 (Gold) (GLD)",
+        "value": 1.61,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "半導体・AI (SOXX)",
+        "value": 0.18,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "メガテック・IT (XLK)",
+        "value": 0.16,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "SaaS・ソフト (IGV)",
+        "value": 0.2,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "金融 (XLF)",
+        "value": 0.18,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "中小型株 (IWM)",
+        "value": 0.21,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "エネルギー (XLE)",
+        "value": 0.18,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "金 (Gold) (GLD)",
+        "value": 0.15,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      }
+    ],
+    "sectors": {
+      "SOXX": {
+        "name": "半導体・AI",
+        "price_change": 15.3,
+        "oi_change": -4.3,
+        "iv_change": 6.2,
+        "short_vol_ratio": 61.6,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 77.11,
+        "components": [
+          "NVDA",
+          "AVGO",
+          "AMD",
+          "TSM"
+        ]
+      },
+      "XLK": {
+        "name": "メガテック・IT",
+        "price_change": 9.9,
+        "oi_change": 1.1,
+        "iv_change": 2.5,
+        "short_vol_ratio": 49.7,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 49.9,
+        "components": [
+          "AAPL",
+          "MSFT",
+          "NVDA",
+          "AVGO"
+        ]
+      },
+      "IGV": {
+        "name": "SaaS・ソフト",
+        "price_change": 1.84,
+        "oi_change": -3.7,
+        "iv_change": 5.8,
+        "short_vol_ratio": 45.7,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 9.27,
+        "components": [
+          "CRM",
+          "WDAY",
+          "DDOG",
+          "NET",
+          "TEAM"
+        ]
+      },
+      "XLV": {
+        "name": "ヘルスケア",
+        "price_change": -2.95,
+        "oi_change": 4.1,
+        "iv_change": -1.2,
+        "short_vol_ratio": 32.5,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444",
+        "estimated_flow": 14.87,
+        "components": [
+          "LLY",
+          "UNH",
+          "JNJ",
+          "PFE"
+        ]
+      },
+      "XLP": {
+        "name": "生活必需品",
+        "price_change": -3.89,
+        "oi_change": -0.4,
+        "iv_change": 0.1,
+        "short_vol_ratio": 49.0,
+        "quality": "LONG_UNWIND",
+        "quality_label": "ロング投げ売り・利確",
+        "quality_color": "#F97316",
+        "estimated_flow": 19.61,
+        "components": [
+          "PG",
+          "COST",
+          "KO",
+          "PEP"
+        ]
+      },
+      "XLF": {
+        "name": "金融",
+        "price_change": 1.01,
+        "oi_change": 0.7,
+        "iv_change": 1.0,
+        "short_vol_ratio": 49.4,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981",
+        "estimated_flow": 5.09,
+        "components": [
+          "JPM",
+          "BAC",
+          "BRK.B",
+          "C"
+        ]
+      },
+      "XLU": {
+        "name": "公益・電力インフラ",
+        "price_change": -1.01,
+        "oi_change": 4.7,
+        "iv_change": -1.2,
+        "short_vol_ratio": 32.5,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444",
+        "estimated_flow": 5.09,
+        "components": [
+          "NEE",
+          "CEG",
+          "DUK",
+          "AEP"
+        ]
+      },
+      "IWM": {
+        "name": "中小型株",
+        "price_change": 2.5,
+        "oi_change": -2.7,
+        "iv_change": -0.6,
+        "short_vol_ratio": 46.4,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 12.6,
+        "components": [
+          "IWM"
+        ]
+      },
+      "XLE": {
+        "name": "エネルギー",
+        "price_change": 0.95,
+        "oi_change": 2.3,
+        "iv_change": 0.1,
+        "short_vol_ratio": 50.0,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981",
+        "estimated_flow": 4.79,
+        "components": [
+          "XOM",
+          "CVX",
+          "COP"
+        ]
+      },
+      "TLT": {
+        "name": "米国20年超国債",
+        "price_change": -0.11,
+        "oi_change": 0.8,
+        "iv_change": -1.2,
+        "short_vol_ratio": 50.1,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444",
+        "estimated_flow": 0.55,
+        "components": [
+          "TLT"
+        ]
+      },
+      "SGOV": {
+        "name": "現金・短期債",
+        "price_change": 0.02,
+        "oi_change": 1.7,
+        "iv_change": -0.9,
+        "short_vol_ratio": 45.5,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981",
+        "estimated_flow": 0.1,
+        "components": [
+          "SGOV"
+        ]
+      },
+      "GLD": {
+        "name": "金 (Gold)",
+        "price_change": 2.95,
+        "oi_change": -2.7,
+        "iv_change": 2.6,
+        "short_vol_ratio": 41.6,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 14.87,
+        "components": [
+          "GLD"
+        ]
+      }
+    },
+    "stock_details": {
+      "NVDA": {
+        "sector": "XLK",
+        "price_change": 2.65,
+        "oi_change": 0.1,
+        "iv_change": 1.5,
+        "short_vol_ratio": 48.3,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
+      },
+      "AVGO": {
+        "sector": "XLK",
+        "price_change": 4.73,
+        "oi_change": 0.3,
+        "iv_change": 2.4,
+        "short_vol_ratio": 48.6,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "AMD": {
+        "sector": "SOXX",
+        "price_change": 13.0,
+        "oi_change": -3.7,
+        "iv_change": 6.8,
+        "short_vol_ratio": 63.2,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "TSM": {
+        "sector": "SOXX",
+        "price_change": 7.64,
+        "oi_change": -4.8,
+        "iv_change": 6.7,
+        "short_vol_ratio": 62.8,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "AAPL": {
+        "sector": "XLK",
+        "price_change": -1.41,
+        "oi_change": 1.9,
+        "iv_change": 2.9,
+        "short_vol_ratio": 50.9,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "MSFT": {
+        "sector": "XLK",
+        "price_change": 15.51,
+        "oi_change": 1.3,
+        "iv_change": 2.1,
+        "short_vol_ratio": 48.8,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "CRM": {
+        "sector": "IGV",
+        "price_change": -4.07,
+        "oi_change": -4.2,
+        "iv_change": 6.7,
+        "short_vol_ratio": 45.8,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
+      },
+      "WDAY": {
+        "sector": "IGV",
+        "price_change": -5.89,
+        "oi_change": -3.7,
+        "iv_change": 6.1,
+        "short_vol_ratio": 45.2,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
+      },
+      "DDOG": {
+        "sector": "IGV",
+        "price_change": 1.65,
+        "oi_change": -2.8,
+        "iv_change": 6.7,
+        "short_vol_ratio": 47.1,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "NET": {
+        "sector": "IGV",
+        "price_change": 4.81,
+        "oi_change": -2.7,
+        "iv_change": 5.5,
+        "short_vol_ratio": 44.8,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "TEAM": {
+        "sector": "IGV",
+        "price_change": -5.91,
+        "oi_change": -4.1,
+        "iv_change": 5.3,
+        "short_vol_ratio": 45.2,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
+      },
+      "LLY": {
+        "sector": "XLV",
+        "price_change": -4.55,
+        "oi_change": 5.0,
+        "iv_change": -0.7,
+        "short_vol_ratio": 32.9,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "UNH": {
+        "sector": "XLV",
+        "price_change": 0.21,
+        "oi_change": 3.8,
+        "iv_change": -1.7,
+        "short_vol_ratio": 31.0,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
+      },
+      "JNJ": {
+        "sector": "XLV",
+        "price_change": -3.66,
+        "oi_change": 4.0,
+        "iv_change": -2.0,
+        "short_vol_ratio": 32.3,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "PFE": {
+        "sector": "XLV",
+        "price_change": -0.95,
+        "oi_change": 4.4,
+        "iv_change": -0.5,
+        "short_vol_ratio": 32.6,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "PG": {
+        "sector": "XLP",
+        "price_change": -1.46,
+        "oi_change": 0.6,
+        "iv_change": 0.1,
+        "short_vol_ratio": 48.7,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "COST": {
+        "sector": "XLP",
+        "price_change": -2.04,
+        "oi_change": -1.4,
+        "iv_change": 0.5,
+        "short_vol_ratio": 48.3,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
+      },
+      "KO": {
+        "sector": "XLP",
+        "price_change": -0.66,
+        "oi_change": -0.8,
+        "iv_change": -0.2,
+        "short_vol_ratio": 49.8,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
+      },
+      "PEP": {
+        "sector": "XLP",
+        "price_change": -2.3,
+        "oi_change": -0.2,
+        "iv_change": 0.6,
+        "short_vol_ratio": 47.6,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
+      },
+      "JPM": {
+        "sector": "XLF",
+        "price_change": 1.78,
+        "oi_change": 0.6,
+        "iv_change": 1.0,
+        "short_vol_ratio": 48.1,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
+      },
+      "BAC": {
+        "sector": "XLF",
+        "price_change": 1.08,
+        "oi_change": 1.7,
+        "iv_change": 1.1,
+        "short_vol_ratio": 50.6,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
+      },
+      "BRK.B": {
+        "sector": "XLF",
+        "price_change": 0.1,
+        "oi_change": 1.4,
+        "iv_change": 1.0,
+        "short_vol_ratio": 48.0,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
+      },
+      "C": {
+        "sector": "XLF",
+        "price_change": 4.08,
+        "oi_change": 0.1,
+        "iv_change": 1.4,
         "short_vol_ratio": 49.3,
         "quality": "REAL_BUY",
         "quality_label": "本物ロング"
       },
-      "JPM": {
-        "sector": "XLF",
-        "price_change": -3.53,
+      "NEE": {
+        "sector": "XLU",
+        "price_change": -0.6,
+        "oi_change": 4.6,
+        "iv_change": -0.5,
+        "short_vol_ratio": 30.5,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "CEG": {
+        "sector": "XLU",
+        "price_change": 2.17,
+        "oi_change": 4.6,
+        "iv_change": -0.6,
+        "short_vol_ratio": 31.8,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
+      },
+      "DUK": {
+        "sector": "XLU",
+        "price_change": -2.18,
+        "oi_change": 3.8,
+        "iv_change": -1.3,
+        "short_vol_ratio": 33.4,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "AEP": {
+        "sector": "XLU",
+        "price_change": -1.25,
+        "oi_change": 5.7,
+        "iv_change": -1.6,
+        "short_vol_ratio": 32.6,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "IWM": {
+        "sector": "IWM",
+        "price_change": 1.39,
+        "oi_change": -2.7,
+        "iv_change": -0.7,
+        "short_vol_ratio": 45.9,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "XOM": {
+        "sector": "XLE",
+        "price_change": 0.14,
+        "oi_change": 1.8,
+        "iv_change": 1.0,
+        "short_vol_ratio": 51.6,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
+      },
+      "CVX": {
+        "sector": "XLE",
+        "price_change": 0.23,
+        "oi_change": 2.5,
+        "iv_change": 0.1,
+        "short_vol_ratio": 48.1,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
+      },
+      "COP": {
+        "sector": "XLE",
+        "price_change": 0.82,
+        "oi_change": 2.4,
+        "iv_change": 1.1,
+        "short_vol_ratio": 49.7,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
+      },
+      "TLT": {
+        "sector": "TLT",
+        "price_change": -0.06,
+        "oi_change": 0.7,
+        "iv_change": -0.8,
+        "short_vol_ratio": 49.1,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "SGOV": {
+        "sector": "SGOV",
+        "price_change": 0.01,
+        "oi_change": 2.7,
+        "iv_change": -1.6,
+        "short_vol_ratio": 44.7,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
+      },
+      "GLD": {
+        "sector": "GLD",
+        "price_change": 1.64,
+        "oi_change": -2.0,
+        "iv_change": 2.9,
+        "short_vol_ratio": 40.7,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      }
+    },
+    "ai_summary": "マスター、当週の資金フローだ。SOXX（半導体）からの資金抜け（+15.3%）が定着している。\nSaaSへの安易な飛びつきは避け、本物のロング買いが集まる電力・ヘルスケアセクターへ注視すべきだ。"
+  },
+  "1M": {
+    "last_updated": "2026-07-31 06:21 JST",
+    "market_date": "2026-07-30",
+    "nodes": [
+      {
+        "name": "半導体・AI (SOXX)",
+        "ticker": "SOXX",
+        "price_change": 29.75,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
+      },
+      {
+        "name": "メガテック・IT (XLK)",
+        "ticker": "XLK",
+        "price_change": 19.25,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
+      },
+      {
+        "name": "SaaS・ソフト (IGV)",
+        "ticker": "IGV",
+        "price_change": 3.57,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
+      },
+      {
+        "name": "ヘルスケア (XLV)",
+        "ticker": "XLV",
+        "price_change": -5.74,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444"
+      },
+      {
+        "name": "生活必需品 (XLP)",
+        "ticker": "XLP",
+        "price_change": -7.56,
+        "quality": "LONG_UNWIND",
+        "quality_label": "ロング投げ売り・利確",
+        "quality_color": "#F97316"
+      },
+      {
+        "name": "金融 (XLF)",
+        "ticker": "XLF",
+        "price_change": 1.96,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
+      },
+      {
+        "name": "公益・電力インフラ (XLU)",
+        "ticker": "XLU",
+        "price_change": -1.96,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444"
+      },
+      {
+        "name": "中小型株 (IWM)",
+        "ticker": "IWM",
+        "price_change": 4.86,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981"
+      },
+      {
+        "name": "エネルギー (XLE)",
+        "ticker": "XLE",
+        "price_change": 1.86,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981"
+      },
+      {
+        "name": "米国20年超国債 (TLT)",
+        "ticker": "TLT",
+        "price_change": -0.21,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444"
+      },
+      {
+        "name": "現金・短期債 (SGOV)",
+        "ticker": "SGOV",
+        "price_change": 0.04,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
+      },
+      {
+        "name": "金 (Gold) (GLD)",
+        "ticker": "GLD",
+        "price_change": 5.74,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
+      }
+    ],
+    "links": [
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "半導体・AI (SOXX)",
+        "value": 17.93,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "メガテック・IT (XLK)",
+        "value": 24.95,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "SaaS・ソフト (IGV)",
+        "value": 15.03,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "金融 (XLF)",
+        "value": 7.24,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "中小型株 (IWM)",
+        "value": 21.42,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "エネルギー (XLE)",
+        "value": 7.5,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "現金・短期債 (SGOV)",
+        "value": 0.14,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "金 (Gold) (GLD)",
+        "value": 22.38,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "半導体・AI (SOXX)",
+        "value": 23.12,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "メガテック・IT (XLK)",
+        "value": 23.53,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "SaaS・ソフト (IGV)",
+        "value": 11.48,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "金融 (XLF)",
+        "value": 5.74,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "中小型株 (IWM)",
+        "value": 15.9,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "エネルギー (XLE)",
+        "value": 6.66,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "現金・短期債 (SGOV)",
+        "value": 0.18,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "金 (Gold) (GLD)",
+        "value": 24.63,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "半導体・AI (SOXX)",
+        "value": 8.84,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "メガテック・IT (XLK)",
+        "value": 7.4,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "SaaS・ソフト (IGV)",
+        "value": 9.12,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "金融 (XLF)",
+        "value": 7.59,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "中小型株 (IWM)",
+        "value": 7.07,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "エネルギー (XLE)",
+        "value": 7.69,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "現金・短期債 (SGOV)",
+        "value": 0.18,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "金 (Gold) (GLD)",
+        "value": 8.81,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "半導体・AI (SOXX)",
+        "value": 0.79,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "メガテック・IT (XLK)",
+        "value": 0.93,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "SaaS・ソフト (IGV)",
+        "value": 0.81,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "金融 (XLF)",
+        "value": 0.94,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "中小型株 (IWM)",
+        "value": 0.65,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "エネルギー (XLE)",
+        "value": 0.64,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "現金・短期債 (SGOV)",
+        "value": 0.14,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "金 (Gold) (GLD)",
+        "value": 0.68,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      }
+    ],
+    "sectors": {
+      "SOXX": {
+        "name": "半導体・AI",
+        "price_change": 29.75,
+        "oi_change": -4.3,
+        "iv_change": 6.2,
+        "short_vol_ratio": 61.6,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 348.08,
+        "components": [
+          "NVDA",
+          "AVGO",
+          "AMD",
+          "TSM"
+        ]
+      },
+      "XLK": {
+        "name": "メガテック・IT",
+        "price_change": 19.25,
+        "oi_change": -2.4,
+        "iv_change": 0.2,
+        "short_vol_ratio": 42.7,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 225.22,
+        "components": [
+          "AAPL",
+          "MSFT",
+          "NVDA",
+          "AVGO"
+        ]
+      },
+      "IGV": {
+        "name": "SaaS・ソフト",
+        "price_change": 3.57,
+        "oi_change": -3.7,
+        "iv_change": 5.8,
+        "short_vol_ratio": 45.7,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 41.77,
+        "components": [
+          "CRM",
+          "WDAY",
+          "DDOG",
+          "NET",
+          "TEAM"
+        ]
+      },
+      "XLV": {
+        "name": "ヘルスケア",
+        "price_change": -5.74,
+        "oi_change": 4.1,
+        "iv_change": -1.2,
+        "short_vol_ratio": 32.5,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444",
+        "estimated_flow": 67.16,
+        "components": [
+          "LLY",
+          "UNH",
+          "JNJ",
+          "PFE"
+        ]
+      },
+      "XLP": {
+        "name": "生活必需品",
+        "price_change": -7.56,
         "oi_change": -1.1,
-        "iv_change": 2.3,
-        "short_vol_ratio": 50.3,
+        "iv_change": 0.2,
+        "short_vol_ratio": 50.0,
         "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
+        "quality_label": "ロング投げ売り・利確",
+        "quality_color": "#F97316",
+        "estimated_flow": 88.45,
+        "components": [
+          "PG",
+          "COST",
+          "KO",
+          "PEP"
+        ]
       },
-      "BAC": {
-        "sector": "XLF",
-        "price_change": -2.48,
-        "oi_change": -1.4,
-        "iv_change": 2.0,
-        "short_vol_ratio": 48.5,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "BRK.B": {
-        "sector": "XLF",
-        "price_change": -0.63,
+      "XLF": {
+        "name": "金融",
+        "price_change": 1.96,
         "oi_change": -1.0,
-        "iv_change": 2.2,
+        "iv_change": -0.4,
+        "short_vol_ratio": 44.9,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 22.93,
+        "components": [
+          "JPM",
+          "BAC",
+          "BRK.B",
+          "C"
+        ]
+      },
+      "XLU": {
+        "name": "公益・電力インフラ",
+        "price_change": -1.96,
+        "oi_change": 4.7,
+        "iv_change": -1.2,
+        "short_vol_ratio": 32.5,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444",
+        "estimated_flow": 22.93,
+        "components": [
+          "NEE",
+          "CEG",
+          "DUK",
+          "AEP"
+        ]
+      },
+      "IWM": {
+        "name": "中小型株",
+        "price_change": 4.86,
+        "oi_change": 0.3,
+        "iv_change": -1.2,
+        "short_vol_ratio": 40.6,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981",
+        "estimated_flow": 56.86,
+        "components": [
+          "IWM"
+        ]
+      },
+      "XLE": {
+        "name": "エネルギー",
+        "price_change": 1.86,
+        "oi_change": 2.2,
+        "iv_change": 1.7,
+        "short_vol_ratio": 38.9,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981",
+        "estimated_flow": 21.76,
+        "components": [
+          "XOM",
+          "CVX",
+          "COP"
+        ]
+      },
+      "TLT": {
+        "name": "米国20年超国債",
+        "price_change": -0.21,
+        "oi_change": 0.7,
+        "iv_change": 0.8,
+        "short_vol_ratio": 42.3,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444",
+        "estimated_flow": 2.46,
+        "components": [
+          "TLT"
+        ]
+      },
+      "SGOV": {
+        "name": "現金・短期債",
+        "price_change": 0.04,
+        "oi_change": -0.9,
+        "iv_change": 1.5,
+        "short_vol_ratio": 40.1,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 0.47,
+        "components": [
+          "SGOV"
+        ]
+      },
+      "GLD": {
+        "name": "金 (Gold)",
+        "price_change": 5.74,
+        "oi_change": -2.1,
+        "iv_change": 1.0,
+        "short_vol_ratio": 49.8,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 67.16,
+        "components": [
+          "GLD"
+        ]
+      }
+    },
+    "stock_details": {
+      "NVDA": {
+        "sector": "XLK",
+        "price_change": 2.65,
+        "oi_change": -2.6,
+        "iv_change": 0.2,
+        "short_vol_ratio": 41.9,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "AVGO": {
+        "sector": "XLK",
+        "price_change": 4.73,
+        "oi_change": -1.9,
+        "iv_change": -0.4,
+        "short_vol_ratio": 44.0,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "AMD": {
+        "sector": "SOXX",
+        "price_change": 13.0,
+        "oi_change": -5.2,
+        "iv_change": 6.6,
+        "short_vol_ratio": 62.8,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "TSM": {
+        "sector": "SOXX",
+        "price_change": 7.64,
+        "oi_change": -4.1,
+        "iv_change": 7.0,
+        "short_vol_ratio": 61.8,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "AAPL": {
+        "sector": "XLK",
+        "price_change": -1.41,
+        "oi_change": -2.9,
+        "iv_change": -0.5,
+        "short_vol_ratio": 42.3,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
+      },
+      "MSFT": {
+        "sector": "XLK",
+        "price_change": 15.51,
+        "oi_change": -2.9,
+        "iv_change": 1.0,
+        "short_vol_ratio": 41.2,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "CRM": {
+        "sector": "IGV",
+        "price_change": -4.07,
+        "oi_change": -3.4,
+        "iv_change": 4.8,
+        "short_vol_ratio": 45.7,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
+      },
+      "WDAY": {
+        "sector": "IGV",
+        "price_change": -5.89,
+        "oi_change": -3.7,
+        "iv_change": 6.7,
+        "short_vol_ratio": 44.7,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
+      },
+      "DDOG": {
+        "sector": "IGV",
+        "price_change": 1.65,
+        "oi_change": -3.3,
+        "iv_change": 4.9,
+        "short_vol_ratio": 46.4,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "NET": {
+        "sector": "IGV",
+        "price_change": 4.81,
+        "oi_change": -2.8,
+        "iv_change": 5.6,
+        "short_vol_ratio": 44.6,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "TEAM": {
+        "sector": "IGV",
+        "price_change": -5.91,
+        "oi_change": -4.3,
+        "iv_change": 5.3,
+        "short_vol_ratio": 45.8,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
+      },
+      "LLY": {
+        "sector": "XLV",
+        "price_change": -4.55,
+        "oi_change": 3.5,
+        "iv_change": -0.7,
+        "short_vol_ratio": 32.4,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "UNH": {
+        "sector": "XLV",
+        "price_change": 0.21,
+        "oi_change": 3.1,
+        "iv_change": -0.3,
+        "short_vol_ratio": 33.8,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
+      },
+      "JNJ": {
+        "sector": "XLV",
+        "price_change": -3.66,
+        "oi_change": 3.7,
+        "iv_change": -2.2,
+        "short_vol_ratio": 32.6,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "PFE": {
+        "sector": "XLV",
+        "price_change": -0.95,
+        "oi_change": 3.2,
+        "iv_change": -0.6,
+        "short_vol_ratio": 33.3,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "PG": {
+        "sector": "XLP",
+        "price_change": -1.46,
+        "oi_change": -1.2,
+        "iv_change": 0.9,
         "short_vol_ratio": 51.9,
         "quality": "LONG_UNWIND",
         "quality_label": "利確・投げ"
       },
-      "C": {
-        "sector": "XLF",
-        "price_change": -4.03,
-        "oi_change": -2.3,
-        "iv_change": 0.8,
-        "short_vol_ratio": 49.0,
+      "COST": {
+        "sector": "XLP",
+        "price_change": -2.04,
+        "oi_change": -1.1,
+        "iv_change": 0.6,
+        "short_vol_ratio": 48.2,
         "quality": "LONG_UNWIND",
         "quality_label": "利確・投げ"
       },
+      "KO": {
+        "sector": "XLP",
+        "price_change": -0.66,
+        "oi_change": -0.3,
+        "iv_change": 0.8,
+        "short_vol_ratio": 51.1,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
+      },
+      "PEP": {
+        "sector": "XLP",
+        "price_change": -2.3,
+        "oi_change": -0.8,
+        "iv_change": -0.6,
+        "short_vol_ratio": 49.3,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
+      },
+      "JPM": {
+        "sector": "XLF",
+        "price_change": 1.78,
+        "oi_change": -1.9,
+        "iv_change": -0.9,
+        "short_vol_ratio": 44.7,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "BAC": {
+        "sector": "XLF",
+        "price_change": 1.08,
+        "oi_change": -1.5,
+        "iv_change": -0.5,
+        "short_vol_ratio": 44.6,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "BRK.B": {
+        "sector": "XLF",
+        "price_change": 0.1,
+        "oi_change": -1.9,
+        "iv_change": 0.1,
+        "short_vol_ratio": 43.9,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "C": {
+        "sector": "XLF",
+        "price_change": 4.08,
+        "oi_change": -1.3,
+        "iv_change": -1.0,
+        "short_vol_ratio": 43.7,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
       "NEE": {
         "sector": "XLU",
-        "price_change": -0.92,
-        "oi_change": 5.2,
+        "price_change": -0.6,
+        "oi_change": 4.2,
         "iv_change": -0.8,
         "short_vol_ratio": 32.1,
         "quality": "NEW_SHORT",
@@ -739,1865 +2377,91 @@
       },
       "CEG": {
         "sector": "XLU",
-        "price_change": -0.72,
-        "oi_change": 4.6,
-        "iv_change": -1.3,
-        "short_vol_ratio": 30.7,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "DUK": {
-        "sector": "XLU",
-        "price_change": -0.12,
-        "oi_change": 3.9,
-        "iv_change": -1.9,
-        "short_vol_ratio": 33.6,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "AEP": {
-        "sector": "XLU",
-        "price_change": -2.72,
-        "oi_change": 5.5,
-        "iv_change": -2.0,
-        "short_vol_ratio": 34.2,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "IWM": {
-        "sector": "IWM",
-        "price_change": -1.64,
-        "oi_change": 1.7,
-        "iv_change": -0.6,
-        "short_vol_ratio": 49.7,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "XOM": {
-        "sector": "XLE",
-        "price_change": 2.42,
-        "oi_change": -0.7,
-        "iv_change": 0.1,
-        "short_vol_ratio": 49.7,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "CVX": {
-        "sector": "XLE",
-        "price_change": 2.28,
-        "oi_change": 0.2,
-        "iv_change": -1.5,
-        "short_vol_ratio": 52.2,
+        "price_change": 2.17,
+        "oi_change": 5.1,
+        "iv_change": -1.6,
+        "short_vol_ratio": 32.4,
         "quality": "REAL_BUY",
         "quality_label": "本物ロング"
       },
-      "COP": {
-        "sector": "XLE",
-        "price_change": 3.47,
-        "oi_change": -1.8,
-        "iv_change": -0.7,
-        "short_vol_ratio": 49.0,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "TLT": {
-        "sector": "TLT",
-        "price_change": -1.65,
-        "oi_change": -2.4,
-        "iv_change": 2.0,
-        "short_vol_ratio": 42.9,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "SGOV": {
-        "sector": "SGOV",
-        "price_change": 0.02,
-        "oi_change": -0.6,
-        "iv_change": 1.1,
-        "short_vol_ratio": 41.2,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "GLD": {
-        "sector": "GLD",
-        "price_change": 0.46,
-        "oi_change": -2.6,
-        "iv_change": -2.5,
-        "short_vol_ratio": 39.9,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      }
-    },
-    "ai_summary": "マスター、昨晩の相場動向を冷徹に分析したぜ。\nSOXX（半導体）が -5.38% と急落し、巨大な資金流出が確認された！一方でSaaS（IGV: +0.64%, 建玉OI: -3.7%）の上昇は【ショートカバー（空売りの買い戻し）】だ。\n建玉(OI)が減退しており、空売りの悲鳴（買い戻し）に過ぎない。本物の買いが集まっているのはヘルスケア（XLV: 建玉OI +4.1%）および電力（XLU: 建玉OI +4.7%）だ！"
-  },
-  "1W": {
-    "last_updated": "2026-07-30 07:02 JST",
-    "market_date": "2026-07-29",
-    "nodes": [
-      {
-        "name": "半導体・AI (SOXX)",
-        "ticker": "SOXX",
-        "price_change": -9.68,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316"
-      },
-      {
-        "name": "メガテック・IT (XLK)",
-        "ticker": "XLK",
-        "price_change": -4.75,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444"
-      },
-      {
-        "name": "SaaS・ソフト (IGV)",
-        "ticker": "IGV",
-        "price_change": 1.15,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B"
-      },
-      {
-        "name": "ヘルスケア (XLV)",
-        "ticker": "XLV",
-        "price_change": -1.1,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444"
-      },
-      {
-        "name": "生活必需品 (XLP)",
-        "ticker": "XLP",
-        "price_change": 0.61,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B"
-      },
-      {
-        "name": "金融 (XLF)",
-        "ticker": "XLF",
-        "price_change": -2.88,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316"
-      },
-      {
-        "name": "公益・電力インフラ (XLU)",
-        "ticker": "XLU",
-        "price_change": -2.41,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444"
-      },
-      {
-        "name": "中小型株 (IWM)",
-        "ticker": "IWM",
-        "price_change": -2.95,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444"
-      },
-      {
-        "name": "エネルギー (XLE)",
-        "ticker": "XLE",
-        "price_change": 3.38,
-        "quality": "REAL_BUY",
-        "quality_label": "本物のロング（買い集め）",
-        "quality_color": "#10B981"
-      },
-      {
-        "name": "米国20年超国債 (TLT)",
-        "ticker": "TLT",
-        "price_change": -2.97,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444"
-      },
-      {
-        "name": "現金・短期債 (SGOV)",
-        "ticker": "SGOV",
-        "price_change": 0.04,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B"
-      },
-      {
-        "name": "金 (Gold) (GLD)",
-        "ticker": "GLD",
-        "price_change": 0.83,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B"
-      }
-    ],
-    "links": [
-      {
-        "source": "半導体・AI (SOXX)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 1.87,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "半導体・AI (SOXX)",
-        "target": "生活必需品 (XLP)",
-        "value": 0.93,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "半導体・AI (SOXX)",
-        "target": "エネルギー (XLE)",
-        "value": 6.41,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "半導体・AI (SOXX)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 0.07,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "半導体・AI (SOXX)",
-        "target": "金 (Gold) (GLD)",
-        "value": 1.47,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 1.86,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "生活必需品 (XLP)",
-        "value": 1.13,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "エネルギー (XLE)",
-        "value": 4.81,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 0.06,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "金 (Gold) (GLD)",
-        "value": 1.5,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "ヘルスケア (XLV)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 1.96,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "ヘルスケア (XLV)",
-        "target": "生活必需品 (XLP)",
-        "value": 1.05,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "ヘルスケア (XLV)",
-        "target": "エネルギー (XLE)",
-        "value": 2.09,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "ヘルスケア (XLV)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 0.08,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "ヘルスケア (XLV)",
-        "target": "金 (Gold) (GLD)",
-        "value": 1.15,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 2.0,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "生活必需品 (XLP)",
-        "value": 1.13,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "エネルギー (XLE)",
-        "value": 3.84,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 0.08,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "金 (Gold) (GLD)",
-        "value": 1.17,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "公益・電力インフラ (XLU)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 1.57,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "公益・電力インフラ (XLU)",
-        "target": "生活必需品 (XLP)",
-        "value": 0.83,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "公益・電力インフラ (XLU)",
-        "target": "エネルギー (XLE)",
-        "value": 4.39,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "公益・電力インフラ (XLU)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 0.07,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "公益・電力インフラ (XLU)",
-        "target": "金 (Gold) (GLD)",
-        "value": 1.46,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 2.15,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "生活必需品 (XLP)",
-        "value": 1.03,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "エネルギー (XLE)",
-        "value": 4.09,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 0.08,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "金 (Gold) (GLD)",
-        "value": 1.64,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 1.73,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "生活必需品 (XLP)",
-        "value": 1.05,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "エネルギー (XLE)",
-        "value": 3.9,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 0.08,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "金 (Gold) (GLD)",
-        "value": 1.38,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      }
-    ],
-    "sectors": {
-      "SOXX": {
-        "name": "半導体・AI",
-        "price_change": -9.68,
-        "oi_change": -4.3,
-        "iv_change": 6.2,
-        "short_vol_ratio": 61.6,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316",
-        "estimated_flow": 48.79,
-        "components": [
-          "NVDA",
-          "AVGO",
-          "AMD",
-          "TSM"
-        ]
-      },
-      "XLK": {
-        "name": "メガテック・IT",
-        "price_change": -4.75,
-        "oi_change": 2.1,
-        "iv_change": 0.5,
-        "short_vol_ratio": 51.0,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444",
-        "estimated_flow": 23.94,
-        "components": [
-          "AAPL",
-          "MSFT",
-          "NVDA",
-          "AVGO"
-        ]
-      },
-      "IGV": {
-        "name": "SaaS・ソフト",
-        "price_change": 1.15,
-        "oi_change": -3.7,
-        "iv_change": 5.8,
-        "short_vol_ratio": 45.7,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B",
-        "estimated_flow": 5.8,
-        "components": [
-          "CRM",
-          "WDAY",
-          "DDOG",
-          "NET",
-          "TEAM"
-        ]
-      },
-      "XLV": {
-        "name": "ヘルスケア",
-        "price_change": -1.1,
-        "oi_change": 4.1,
-        "iv_change": -1.2,
-        "short_vol_ratio": 32.5,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444",
-        "estimated_flow": 5.54,
-        "components": [
-          "LLY",
-          "UNH",
-          "JNJ",
-          "PFE"
-        ]
-      },
-      "XLP": {
-        "name": "生活必需品",
-        "price_change": 0.61,
-        "oi_change": -1.6,
-        "iv_change": 2.4,
-        "short_vol_ratio": 51.0,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B",
-        "estimated_flow": 3.07,
-        "components": [
-          "PG",
-          "COST",
-          "KO",
-          "PEP"
-        ]
-      },
-      "XLF": {
-        "name": "金融",
-        "price_change": -2.88,
-        "oi_change": -0.2,
-        "iv_change": -1.9,
-        "short_vol_ratio": 44.1,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316",
-        "estimated_flow": 14.52,
-        "components": [
-          "JPM",
-          "BAC",
-          "BRK.B",
-          "C"
-        ]
-      },
-      "XLU": {
-        "name": "公益・電力インフラ",
-        "price_change": -2.41,
+      "DUK": {
+        "sector": "XLU",
+        "price_change": -2.18,
         "oi_change": 4.7,
         "iv_change": -1.2,
-        "short_vol_ratio": 32.5,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444",
-        "estimated_flow": 12.15,
-        "components": [
-          "NEE",
-          "CEG",
-          "DUK",
-          "AEP"
-        ]
-      },
-      "IWM": {
-        "name": "中小型株",
-        "price_change": -2.95,
-        "oi_change": 2.5,
-        "iv_change": 2.7,
-        "short_vol_ratio": 43.7,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444",
-        "estimated_flow": 14.87,
-        "components": [
-          "IWM"
-        ]
-      },
-      "XLE": {
-        "name": "エネルギー",
-        "price_change": 3.38,
-        "oi_change": 2.7,
-        "iv_change": 0.6,
-        "short_vol_ratio": 45.5,
-        "quality": "REAL_BUY",
-        "quality_label": "本物のロング（買い集め）",
-        "quality_color": "#10B981",
-        "estimated_flow": 17.04,
-        "components": [
-          "XOM",
-          "CVX",
-          "COP"
-        ]
-      },
-      "TLT": {
-        "name": "米国20年超国債",
-        "price_change": -2.97,
-        "oi_change": 1.2,
-        "iv_change": 1.1,
-        "short_vol_ratio": 38.7,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444",
-        "estimated_flow": 14.97,
-        "components": [
-          "TLT"
-        ]
-      },
-      "SGOV": {
-        "name": "現金・短期債",
-        "price_change": 0.04,
-        "oi_change": -2.6,
-        "iv_change": 2.0,
-        "short_vol_ratio": 41.2,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B",
-        "estimated_flow": 0.2,
-        "components": [
-          "SGOV"
-        ]
-      },
-      "GLD": {
-        "name": "金 (Gold)",
-        "price_change": 0.83,
-        "oi_change": -1.8,
-        "iv_change": 2.8,
-        "short_vol_ratio": 44.2,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B",
-        "estimated_flow": 4.18,
-        "components": [
-          "GLD"
-        ]
-      }
-    },
-    "stock_details": {
-      "NVDA": {
-        "sector": "XLK",
-        "price_change": -3.55,
-        "oi_change": 2.4,
-        "iv_change": -0.5,
-        "short_vol_ratio": 51.1,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "AVGO": {
-        "sector": "XLK",
-        "price_change": -2.78,
-        "oi_change": 1.6,
-        "iv_change": 1.2,
-        "short_vol_ratio": 51.2,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "AMD": {
-        "sector": "SOXX",
-        "price_change": -5.51,
-        "oi_change": -4.5,
-        "iv_change": 7.1,
-        "short_vol_ratio": 61.0,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "TSM": {
-        "sector": "SOXX",
-        "price_change": -4.5,
-        "oi_change": -4.9,
-        "iv_change": 6.1,
-        "short_vol_ratio": 63.1,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "AAPL": {
-        "sector": "XLK",
-        "price_change": -0.56,
-        "oi_change": 3.0,
-        "iv_change": 0.4,
-        "short_vol_ratio": 51.7,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "MSFT": {
-        "sector": "XLK",
-        "price_change": -0.71,
-        "oi_change": 2.3,
-        "iv_change": 0.5,
-        "short_vol_ratio": 52.7,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "CRM": {
-        "sector": "IGV",
-        "price_change": 3.79,
-        "oi_change": -3.1,
-        "iv_change": 5.6,
-        "short_vol_ratio": 44.2,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "WDAY": {
-        "sector": "IGV",
-        "price_change": 5.21,
-        "oi_change": -3.8,
-        "iv_change": 5.7,
-        "short_vol_ratio": 47.0,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "DDOG": {
-        "sector": "IGV",
-        "price_change": 5.31,
-        "oi_change": -3.2,
-        "iv_change": 5.8,
-        "short_vol_ratio": 45.2,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "NET": {
-        "sector": "IGV",
-        "price_change": 2.38,
-        "oi_change": -3.7,
-        "iv_change": 5.2,
-        "short_vol_ratio": 45.2,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "TEAM": {
-        "sector": "IGV",
-        "price_change": 4.3,
-        "oi_change": -3.4,
-        "iv_change": 6.7,
-        "short_vol_ratio": 44.2,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "LLY": {
-        "sector": "XLV",
-        "price_change": -0.87,
-        "oi_change": 3.5,
-        "iv_change": -1.8,
-        "short_vol_ratio": 32.5,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "UNH": {
-        "sector": "XLV",
-        "price_change": -1.92,
-        "oi_change": 5.0,
-        "iv_change": -1.4,
-        "short_vol_ratio": 33.1,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "JNJ": {
-        "sector": "XLV",
-        "price_change": -0.45,
-        "oi_change": 3.3,
-        "iv_change": -0.4,
-        "short_vol_ratio": 32.2,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "PFE": {
-        "sector": "XLV",
-        "price_change": -0.4,
-        "oi_change": 3.8,
-        "iv_change": -0.9,
-        "short_vol_ratio": 33.7,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "PG": {
-        "sector": "XLP",
-        "price_change": -1.87,
-        "oi_change": -1.7,
-        "iv_change": 1.6,
-        "short_vol_ratio": 51.9,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "COST": {
-        "sector": "XLP",
-        "price_change": 0.77,
-        "oi_change": -1.9,
-        "iv_change": 1.7,
-        "short_vol_ratio": 50.8,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "KO": {
-        "sector": "XLP",
-        "price_change": 0.92,
-        "oi_change": -1.7,
-        "iv_change": 3.1,
-        "short_vol_ratio": 49.7,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "PEP": {
-        "sector": "XLP",
-        "price_change": 0.45,
-        "oi_change": -0.8,
-        "iv_change": 2.2,
-        "short_vol_ratio": 49.8,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "JPM": {
-        "sector": "XLF",
-        "price_change": -3.53,
-        "oi_change": 0.3,
-        "iv_change": -1.0,
-        "short_vol_ratio": 43.1,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "BAC": {
-        "sector": "XLF",
-        "price_change": -2.48,
-        "oi_change": 0.0,
-        "iv_change": -2.4,
-        "short_vol_ratio": 42.6,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "BRK.B": {
-        "sector": "XLF",
-        "price_change": -0.63,
-        "oi_change": 0.2,
-        "iv_change": -1.0,
-        "short_vol_ratio": 43.5,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "C": {
-        "sector": "XLF",
-        "price_change": -4.03,
-        "oi_change": 0.3,
-        "iv_change": -1.1,
-        "short_vol_ratio": 42.4,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "NEE": {
-        "sector": "XLU",
-        "price_change": -0.92,
-        "oi_change": 4.2,
-        "iv_change": -2.2,
         "short_vol_ratio": 34.1,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート"
       },
-      "CEG": {
-        "sector": "XLU",
-        "price_change": -0.72,
-        "oi_change": 4.2,
-        "iv_change": -1.2,
-        "short_vol_ratio": 34.2,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "DUK": {
-        "sector": "XLU",
-        "price_change": -0.12,
-        "oi_change": 4.2,
-        "iv_change": -1.2,
-        "short_vol_ratio": 30.6,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
       "AEP": {
         "sector": "XLU",
-        "price_change": -2.72,
-        "oi_change": 4.6,
-        "iv_change": -1.4,
-        "short_vol_ratio": 31.0,
+        "price_change": -1.25,
+        "oi_change": 4.2,
+        "iv_change": -0.5,
+        "short_vol_ratio": 32.8,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート"
       },
       "IWM": {
         "sector": "IWM",
-        "price_change": -1.64,
-        "oi_change": 2.7,
-        "iv_change": 3.2,
-        "short_vol_ratio": 45.2,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "XOM": {
-        "sector": "XLE",
-        "price_change": 2.42,
-        "oi_change": 2.3,
-        "iv_change": 0.5,
-        "short_vol_ratio": 47.5,
-        "quality": "REAL_BUY",
-        "quality_label": "本物ロング"
-      },
-      "CVX": {
-        "sector": "XLE",
-        "price_change": 2.28,
-        "oi_change": 3.6,
-        "iv_change": -0.2,
-        "short_vol_ratio": 45.1,
-        "quality": "REAL_BUY",
-        "quality_label": "本物ロング"
-      },
-      "COP": {
-        "sector": "XLE",
-        "price_change": 3.47,
-        "oi_change": 2.5,
-        "iv_change": 0.3,
-        "short_vol_ratio": 44.5,
-        "quality": "REAL_BUY",
-        "quality_label": "本物ロング"
-      },
-      "TLT": {
-        "sector": "TLT",
-        "price_change": -1.65,
-        "oi_change": 1.7,
-        "iv_change": 1.2,
-        "short_vol_ratio": 38.9,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "SGOV": {
-        "sector": "SGOV",
-        "price_change": 0.02,
-        "oi_change": -2.5,
-        "iv_change": 1.9,
-        "short_vol_ratio": 41.7,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "GLD": {
-        "sector": "GLD",
-        "price_change": 0.46,
-        "oi_change": -1.4,
-        "iv_change": 3.3,
-        "short_vol_ratio": 44.5,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      }
-    },
-    "ai_summary": "マスター、当週の資金フローだ。SOXX（半導体）からの資金抜け（-9.68%）が定着している。\nSaaSへの安易な飛びつきは避け、本物のロング買いが集まる電力・ヘルスケアセクターへ注視すべきだ。"
-  },
-  "1M": {
-    "last_updated": "2026-07-30 07:02 JST",
-    "market_date": "2026-07-29",
-    "nodes": [
-      {
-        "name": "半導体・AI (SOXX)",
-        "ticker": "SOXX",
-        "price_change": -18.83,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316"
-      },
-      {
-        "name": "メガテック・IT (XLK)",
-        "ticker": "XLK",
-        "price_change": -9.24,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316"
-      },
-      {
-        "name": "SaaS・ソフト (IGV)",
-        "ticker": "IGV",
-        "price_change": 2.24,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B"
-      },
-      {
-        "name": "ヘルスケア (XLV)",
-        "ticker": "XLV",
-        "price_change": -2.13,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444"
-      },
-      {
-        "name": "生活必需品 (XLP)",
-        "ticker": "XLP",
-        "price_change": 1.19,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B"
-      },
-      {
-        "name": "金融 (XLF)",
-        "ticker": "XLF",
-        "price_change": -5.6,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316"
-      },
-      {
-        "name": "公益・電力インフラ (XLU)",
-        "ticker": "XLU",
-        "price_change": -4.69,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444"
-      },
-      {
-        "name": "中小型株 (IWM)",
-        "ticker": "IWM",
-        "price_change": -5.74,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316"
-      },
-      {
-        "name": "エネルギー (XLE)",
-        "ticker": "XLE",
-        "price_change": 6.58,
-        "quality": "REAL_BUY",
-        "quality_label": "本物のロング（買い集め）",
-        "quality_color": "#10B981"
-      },
-      {
-        "name": "米国20年超国債 (TLT)",
-        "ticker": "TLT",
-        "price_change": -5.78,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316"
-      },
-      {
-        "name": "現金・短期債 (SGOV)",
-        "ticker": "SGOV",
-        "price_change": 0.07,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B"
-      },
-      {
-        "name": "金 (Gold) (GLD)",
-        "ticker": "GLD",
-        "price_change": 1.61,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B"
-      }
-    ],
-    "links": [
-      {
-        "source": "半導体・AI (SOXX)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 8.43,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "半導体・AI (SOXX)",
-        "target": "生活必需品 (XLP)",
-        "value": 4.36,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "半導体・AI (SOXX)",
-        "target": "エネルギー (XLE)",
-        "value": 30.0,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "半導体・AI (SOXX)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 0.28,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "半導体・AI (SOXX)",
-        "target": "金 (Gold) (GLD)",
-        "value": 5.94,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 7.65,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "生活必需品 (XLP)",
-        "value": 4.73,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "エネルギー (XLE)",
-        "value": 28.16,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 0.29,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "金 (Gold) (GLD)",
-        "value": 5.74,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "ヘルスケア (XLV)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 6.39,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "ヘルスケア (XLV)",
-        "target": "生活必需品 (XLP)",
-        "value": 5.22,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "ヘルスケア (XLV)",
-        "target": "エネルギー (XLE)",
-        "value": 8.06,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "ヘルスケア (XLV)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 0.31,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "ヘルスケア (XLV)",
-        "target": "金 (Gold) (GLD)",
-        "value": 5.99,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 9.54,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "生活必需品 (XLP)",
-        "value": 4.96,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "エネルギー (XLE)",
-        "value": 16.88,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 0.3,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "金 (Gold) (GLD)",
-        "value": 6.71,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "公益・電力インフラ (XLU)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 9.79,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "公益・電力インフラ (XLU)",
-        "target": "生活必需品 (XLP)",
-        "value": 3.93,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "公益・電力インフラ (XLU)",
-        "target": "エネルギー (XLE)",
-        "value": 19.77,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "公益・電力インフラ (XLU)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 0.22,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "公益・電力インフラ (XLU)",
-        "target": "金 (Gold) (GLD)",
-        "value": 6.07,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 8.72,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "生活必需品 (XLP)",
-        "value": 4.92,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "エネルギー (XLE)",
-        "value": 19.39,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 0.22,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "金 (Gold) (GLD)",
-        "value": 6.99,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 9.57,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "生活必需品 (XLP)",
-        "value": 4.68,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "エネルギー (XLE)",
-        "value": 21.11,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 0.3,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "金 (Gold) (GLD)",
-        "value": 5.2,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      }
-    ],
-    "sectors": {
-      "SOXX": {
-        "name": "半導体・AI",
-        "price_change": -18.83,
-        "oi_change": -4.3,
-        "iv_change": 6.2,
-        "short_vol_ratio": 61.6,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316",
-        "estimated_flow": 220.31,
-        "components": [
-          "NVDA",
-          "AVGO",
-          "AMD",
-          "TSM"
-        ]
-      },
-      "XLK": {
-        "name": "メガテック・IT",
-        "price_change": -9.24,
-        "oi_change": -2.4,
-        "iv_change": 1.3,
-        "short_vol_ratio": 41.1,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316",
-        "estimated_flow": 108.11,
-        "components": [
-          "AAPL",
-          "MSFT",
-          "NVDA",
-          "AVGO"
-        ]
-      },
-      "IGV": {
-        "name": "SaaS・ソフト",
-        "price_change": 2.24,
-        "oi_change": -3.7,
-        "iv_change": 5.8,
-        "short_vol_ratio": 45.7,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B",
-        "estimated_flow": 26.21,
-        "components": [
-          "CRM",
-          "WDAY",
-          "DDOG",
-          "NET",
-          "TEAM"
-        ]
-      },
-      "XLV": {
-        "name": "ヘルスケア",
-        "price_change": -2.13,
-        "oi_change": 4.1,
-        "iv_change": -1.2,
-        "short_vol_ratio": 32.5,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444",
-        "estimated_flow": 24.92,
-        "components": [
-          "LLY",
-          "UNH",
-          "JNJ",
-          "PFE"
-        ]
-      },
-      "XLP": {
-        "name": "生活必需品",
-        "price_change": 1.19,
-        "oi_change": -0.2,
-        "iv_change": -0.9,
-        "short_vol_ratio": 42.7,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B",
-        "estimated_flow": 13.92,
-        "components": [
-          "PG",
-          "COST",
-          "KO",
-          "PEP"
-        ]
-      },
-      "XLF": {
-        "name": "金融",
-        "price_change": -5.6,
-        "oi_change": -2.2,
-        "iv_change": 1.8,
-        "short_vol_ratio": 40.6,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316",
-        "estimated_flow": 65.52,
-        "components": [
-          "JPM",
-          "BAC",
-          "BRK.B",
-          "C"
-        ]
-      },
-      "XLU": {
-        "name": "公益・電力インフラ",
-        "price_change": -4.69,
-        "oi_change": 4.7,
-        "iv_change": -1.2,
-        "short_vol_ratio": 32.5,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444",
-        "estimated_flow": 54.87,
-        "components": [
-          "NEE",
-          "CEG",
-          "DUK",
-          "AEP"
-        ]
-      },
-      "IWM": {
-        "name": "中小型株",
-        "price_change": -5.74,
-        "oi_change": -1.4,
-        "iv_change": 1.8,
-        "short_vol_ratio": 40.9,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316",
-        "estimated_flow": 67.16,
-        "components": [
-          "IWM"
-        ]
-      },
-      "XLE": {
-        "name": "エネルギー",
-        "price_change": 6.58,
-        "oi_change": 1.8,
-        "iv_change": 2.0,
-        "short_vol_ratio": 49.7,
-        "quality": "REAL_BUY",
-        "quality_label": "本物のロング（買い集め）",
-        "quality_color": "#10B981",
-        "estimated_flow": 76.99,
-        "components": [
-          "XOM",
-          "CVX",
-          "COP"
-        ]
-      },
-      "TLT": {
-        "name": "米国20年超国債",
-        "price_change": -5.78,
-        "oi_change": -0.8,
+        "price_change": 1.39,
+        "oi_change": 0.2,
         "iv_change": -1.7,
-        "short_vol_ratio": 40.8,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316",
-        "estimated_flow": 67.63,
-        "components": [
-          "TLT"
-        ]
-      },
-      "SGOV": {
-        "name": "現金・短期債",
-        "price_change": 0.07,
-        "oi_change": -2.2,
-        "iv_change": -1.2,
-        "short_vol_ratio": 48.0,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B",
-        "estimated_flow": 0.82,
-        "components": [
-          "SGOV"
-        ]
-      },
-      "GLD": {
-        "name": "金 (Gold)",
-        "price_change": 1.61,
-        "oi_change": -2.1,
-        "iv_change": -1.8,
-        "short_vol_ratio": 47.7,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B",
-        "estimated_flow": 18.84,
-        "components": [
-          "GLD"
-        ]
-      }
-    },
-    "stock_details": {
-      "NVDA": {
-        "sector": "XLK",
-        "price_change": -3.55,
-        "oi_change": -1.9,
-        "iv_change": 1.1,
-        "short_vol_ratio": 42.8,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "AVGO": {
-        "sector": "XLK",
-        "price_change": -2.78,
-        "oi_change": -1.7,
-        "iv_change": 1.0,
-        "short_vol_ratio": 42.4,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "AMD": {
-        "sector": "SOXX",
-        "price_change": -5.51,
-        "oi_change": -5.1,
-        "iv_change": 5.4,
-        "short_vol_ratio": 60.3,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "TSM": {
-        "sector": "SOXX",
-        "price_change": -4.5,
-        "oi_change": -4.7,
-        "iv_change": 6.1,
-        "short_vol_ratio": 61.4,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "AAPL": {
-        "sector": "XLK",
-        "price_change": -0.56,
-        "oi_change": -2.3,
-        "iv_change": 1.7,
-        "short_vol_ratio": 42.5,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "MSFT": {
-        "sector": "XLK",
-        "price_change": -0.71,
-        "oi_change": -2.7,
-        "iv_change": 2.2,
-        "short_vol_ratio": 40.4,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "CRM": {
-        "sector": "IGV",
-        "price_change": 3.79,
-        "oi_change": -3.6,
-        "iv_change": 6.6,
-        "short_vol_ratio": 47.7,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "WDAY": {
-        "sector": "IGV",
-        "price_change": 5.21,
-        "oi_change": -3.1,
-        "iv_change": 6.6,
-        "short_vol_ratio": 46.6,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "DDOG": {
-        "sector": "IGV",
-        "price_change": 5.31,
-        "oi_change": -3.0,
-        "iv_change": 6.1,
-        "short_vol_ratio": 47.2,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "NET": {
-        "sector": "IGV",
-        "price_change": 2.38,
-        "oi_change": -3.3,
-        "iv_change": 4.8,
-        "short_vol_ratio": 46.1,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "TEAM": {
-        "sector": "IGV",
-        "price_change": 4.3,
-        "oi_change": -3.9,
-        "iv_change": 5.4,
-        "short_vol_ratio": 45.7,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "LLY": {
-        "sector": "XLV",
-        "price_change": -0.87,
-        "oi_change": 3.6,
-        "iv_change": -2.0,
-        "short_vol_ratio": 31.9,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "UNH": {
-        "sector": "XLV",
-        "price_change": -1.92,
-        "oi_change": 4.9,
-        "iv_change": -1.3,
-        "short_vol_ratio": 32.2,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "JNJ": {
-        "sector": "XLV",
-        "price_change": -0.45,
-        "oi_change": 3.6,
-        "iv_change": -1.3,
-        "short_vol_ratio": 34.1,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "PFE": {
-        "sector": "XLV",
-        "price_change": -0.4,
-        "oi_change": 3.9,
-        "iv_change": -2.2,
-        "short_vol_ratio": 32.6,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "PG": {
-        "sector": "XLP",
-        "price_change": -1.87,
-        "oi_change": -0.2,
-        "iv_change": 0.0,
-        "short_vol_ratio": 43.9,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "COST": {
-        "sector": "XLP",
-        "price_change": 0.77,
-        "oi_change": -1.2,
-        "iv_change": -0.7,
-        "short_vol_ratio": 44.6,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "KO": {
-        "sector": "XLP",
-        "price_change": 0.92,
-        "oi_change": 0.8,
-        "iv_change": -0.3,
-        "short_vol_ratio": 43.5,
+        "short_vol_ratio": 41.4,
         "quality": "REAL_BUY",
         "quality_label": "本物ロング"
-      },
-      "PEP": {
-        "sector": "XLP",
-        "price_change": 0.45,
-        "oi_change": -1.1,
-        "iv_change": -0.2,
-        "short_vol_ratio": 43.8,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "JPM": {
-        "sector": "XLF",
-        "price_change": -3.53,
-        "oi_change": -2.2,
-        "iv_change": 1.0,
-        "short_vol_ratio": 41.5,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "BAC": {
-        "sector": "XLF",
-        "price_change": -2.48,
-        "oi_change": -1.2,
-        "iv_change": 1.2,
-        "short_vol_ratio": 38.8,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "BRK.B": {
-        "sector": "XLF",
-        "price_change": -0.63,
-        "oi_change": -2.4,
-        "iv_change": 1.8,
-        "short_vol_ratio": 40.8,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "C": {
-        "sector": "XLF",
-        "price_change": -4.03,
-        "oi_change": -2.0,
-        "iv_change": 2.6,
-        "short_vol_ratio": 40.1,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
-      },
-      "NEE": {
-        "sector": "XLU",
-        "price_change": -0.92,
-        "oi_change": 4.5,
-        "iv_change": -0.4,
-        "short_vol_ratio": 34.4,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "CEG": {
-        "sector": "XLU",
-        "price_change": -0.72,
-        "oi_change": 4.8,
-        "iv_change": -1.3,
-        "short_vol_ratio": 33.9,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "DUK": {
-        "sector": "XLU",
-        "price_change": -0.12,
-        "oi_change": 3.7,
-        "iv_change": -1.3,
-        "short_vol_ratio": 34.5,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "AEP": {
-        "sector": "XLU",
-        "price_change": -2.72,
-        "oi_change": 5.2,
-        "iv_change": -1.5,
-        "short_vol_ratio": 33.4,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "IWM": {
-        "sector": "IWM",
-        "price_change": -1.64,
-        "oi_change": -1.9,
-        "iv_change": 1.4,
-        "short_vol_ratio": 40.8,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
       },
       "XOM": {
         "sector": "XLE",
-        "price_change": 2.42,
-        "oi_change": 1.7,
-        "iv_change": 2.4,
-        "short_vol_ratio": 48.8,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
-      },
-      "CVX": {
-        "sector": "XLE",
-        "price_change": 2.28,
+        "price_change": 0.14,
         "oi_change": 1.9,
-        "iv_change": 1.6,
-        "short_vol_ratio": 49.3,
+        "iv_change": 1.3,
+        "short_vol_ratio": 40.6,
         "quality": "REAL_BUY",
         "quality_label": "本物ロング"
       },
+      "CVX": {
+        "sector": "XLE",
+        "price_change": 0.23,
+        "oi_change": 1.9,
+        "iv_change": 2.3,
+        "short_vol_ratio": 40.2,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
       "COP": {
         "sector": "XLE",
-        "price_change": 3.47,
-        "oi_change": 2.3,
-        "iv_change": 1.3,
-        "short_vol_ratio": 49.0,
+        "price_change": 0.82,
+        "oi_change": 1.3,
+        "iv_change": 0.9,
+        "short_vol_ratio": 39.5,
         "quality": "REAL_BUY",
         "quality_label": "本物ロング"
       },
       "TLT": {
         "sector": "TLT",
-        "price_change": -1.65,
-        "oi_change": -0.4,
-        "iv_change": -2.4,
-        "short_vol_ratio": 42.3,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
+        "price_change": -0.06,
+        "oi_change": 0.8,
+        "iv_change": 1.5,
+        "short_vol_ratio": 40.9,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
       },
       "SGOV": {
         "sector": "SGOV",
-        "price_change": 0.02,
-        "oi_change": -2.1,
-        "iv_change": -0.5,
-        "short_vol_ratio": 48.1,
+        "price_change": 0.01,
+        "oi_change": -0.6,
+        "iv_change": 1.8,
+        "short_vol_ratio": 38.4,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー"
       },
       "GLD": {
         "sector": "GLD",
-        "price_change": 0.46,
-        "oi_change": -2.9,
-        "iv_change": -2.3,
-        "short_vol_ratio": 46.5,
+        "price_change": 1.64,
+        "oi_change": -2.5,
+        "iv_change": 0.1,
+        "short_vol_ratio": 51.2,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー"
       }
@@ -2605,29 +2469,29 @@
     "ai_summary": "マスター、当月の確証データだ。SOXXの流出とIGVの急騰におけるショートカバー比率の高さが裏付けられた。"
   },
   "YTD": {
-    "last_updated": "2026-07-30 07:02 JST",
-    "market_date": "2026-07-29",
+    "last_updated": "2026-07-31 06:21 JST",
+    "market_date": "2026-07-30",
     "nodes": [
       {
         "name": "半導体・AI (SOXX)",
         "ticker": "SOXX",
-        "price_change": -43.04,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316"
+        "price_change": 68.0,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
       },
       {
         "name": "メガテック・IT (XLK)",
         "ticker": "XLK",
-        "price_change": -21.12,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316"
+        "price_change": 44.0,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981"
       },
       {
         "name": "SaaS・ソフト (IGV)",
         "ticker": "IGV",
-        "price_change": 5.12,
+        "price_change": 8.16,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー（空売りの買い戻し）",
         "quality_color": "#F59E0B"
@@ -2635,7 +2499,7 @@
       {
         "name": "ヘルスケア (XLV)",
         "ticker": "XLV",
-        "price_change": -4.88,
+        "price_change": -13.12,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート殺到",
         "quality_color": "#EF4444"
@@ -2643,23 +2507,23 @@
       {
         "name": "生活必需品 (XLP)",
         "ticker": "XLP",
-        "price_change": 2.72,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B"
-      },
-      {
-        "name": "金融 (XLF)",
-        "ticker": "XLF",
-        "price_change": -12.8,
+        "price_change": -17.28,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート殺到",
         "quality_color": "#EF4444"
       },
       {
+        "name": "金融 (XLF)",
+        "ticker": "XLF",
+        "price_change": 4.48,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
+      },
+      {
         "name": "公益・電力インフラ (XLU)",
         "ticker": "XLU",
-        "price_change": -10.72,
+        "price_change": -4.48,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート殺到",
         "quality_color": "#EF4444"
@@ -2667,15 +2531,15 @@
       {
         "name": "中小型株 (IWM)",
         "ticker": "IWM",
-        "price_change": -13.12,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444"
+        "price_change": 11.12,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B"
       },
       {
         "name": "エネルギー (XLE)",
         "ticker": "XLE",
-        "price_change": 15.04,
+        "price_change": 4.24,
         "quality": "REAL_BUY",
         "quality_label": "本物のロング（買い集め）",
         "quality_color": "#10B981"
@@ -2683,15 +2547,15 @@
       {
         "name": "米国20年超国債 (TLT)",
         "ticker": "TLT",
-        "price_change": -13.2,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316"
+        "price_change": -0.48,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444"
       },
       {
         "name": "現金・短期債 (SGOV)",
         "ticker": "SGOV",
-        "price_change": 0.16,
+        "price_change": 0.08,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー（空売りの買い戻し）",
         "quality_color": "#F59E0B"
@@ -2699,105 +2563,49 @@
       {
         "name": "金 (Gold) (GLD)",
         "ticker": "GLD",
-        "price_change": 3.68,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B"
+        "price_change": 13.12,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981"
       }
     ],
     "links": [
       {
-        "source": "半導体・AI (SOXX)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 61.64,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "半導体・AI (SOXX)",
-        "target": "生活必需品 (XLP)",
-        "value": 29.89,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "半導体・AI (SOXX)",
-        "target": "エネルギー (XLE)",
-        "value": 126.07,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "半導体・AI (SOXX)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 1.39,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "半導体・AI (SOXX)",
-        "target": "金 (Gold) (GLD)",
-        "value": 31.49,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 58.27,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "生活必需品 (XLP)",
-        "value": 26.31,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "エネルギー (XLE)",
-        "value": 159.94,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 1.88,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "メガテック・IT (XLK)",
-        "target": "金 (Gold) (GLD)",
-        "value": 34.88,
+        "source": "ヘルスケア (XLV)",
+        "target": "半導体・AI (SOXX)",
+        "value": 140.07,
         "quality": "SHORT_COVER",
         "quality_color": "#F59E0B",
         "quality_label": "ショートカバー（空売りの買い戻し）"
       },
       {
         "source": "ヘルスケア (XLV)",
+        "target": "メガテック・IT (XLK)",
+        "value": 128.02,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
         "target": "SaaS・ソフト (IGV)",
-        "value": 59.66,
+        "value": 83.54,
         "quality": "SHORT_COVER",
         "quality_color": "#F59E0B",
         "quality_label": "ショートカバー（空売りの買い戻し）"
       },
       {
         "source": "ヘルスケア (XLV)",
-        "target": "生活必需品 (XLP)",
-        "value": 33.6,
+        "target": "金融 (XLF)",
+        "value": 56.73,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "ヘルスケア (XLV)",
+        "target": "中小型株 (IWM)",
+        "value": 112.89,
         "quality": "SHORT_COVER",
         "quality_color": "#F59E0B",
         "quality_label": "ショートカバー（空売りの買い戻し）"
@@ -2805,7 +2613,7 @@
       {
         "source": "ヘルスケア (XLV)",
         "target": "エネルギー (XLE)",
-        "value": 46.35,
+        "value": 53.69,
         "quality": "REAL_BUY",
         "quality_color": "#10B981",
         "quality_label": "本物のロング（買い集め）"
@@ -2813,7 +2621,7 @@
       {
         "source": "ヘルスケア (XLV)",
         "target": "現金・短期債 (SGOV)",
-        "value": 1.96,
+        "value": 0.87,
         "quality": "SHORT_COVER",
         "quality_color": "#F59E0B",
         "quality_label": "ショートカバー（空売りの買い戻し）"
@@ -2821,63 +2629,111 @@
       {
         "source": "ヘルスケア (XLV)",
         "target": "金 (Gold) (GLD)",
-        "value": 33.55,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 51.99,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "生活必需品 (XLP)",
-        "value": 31.96,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "金融 (XLF)",
-        "target": "エネルギー (XLE)",
-        "value": 143.3,
+        "value": 112.56,
         "quality": "REAL_BUY",
         "quality_color": "#10B981",
         "quality_label": "本物のロング（買い集め）"
       },
       {
-        "source": "金融 (XLF)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 1.95,
+        "source": "生活必需品 (XLP)",
+        "target": "半導体・AI (SOXX)",
+        "value": 162.3,
         "quality": "SHORT_COVER",
         "quality_color": "#F59E0B",
         "quality_label": "ショートカバー（空売りの買い戻し）"
       },
       {
-        "source": "金融 (XLF)",
-        "target": "金 (Gold) (GLD)",
-        "value": 43.71,
+        "source": "生活必需品 (XLP)",
+        "target": "メガテック・IT (XLK)",
+        "value": 220.09,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "SaaS・ソフト (IGV)",
+        "value": 68.92,
         "quality": "SHORT_COVER",
         "quality_color": "#F59E0B",
         "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "金融 (XLF)",
+        "value": 36.35,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "中小型株 (IWM)",
+        "value": 137.34,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "エネルギー (XLE)",
+        "value": 39.34,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "現金・短期債 (SGOV)",
+        "value": 1.02,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "生活必需品 (XLP)",
+        "target": "金 (Gold) (GLD)",
+        "value": 155.95,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "半導体・AI (SOXX)",
+        "value": 48.77,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "メガテック・IT (XLK)",
+        "value": 52.23,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
       },
       {
         "source": "公益・電力インフラ (XLU)",
         "target": "SaaS・ソフト (IGV)",
-        "value": 44.26,
+        "value": 38.09,
         "quality": "SHORT_COVER",
         "quality_color": "#F59E0B",
         "quality_label": "ショートカバー（空売りの買い戻し）"
       },
       {
         "source": "公益・電力インフラ (XLU)",
-        "target": "生活必需品 (XLP)",
-        "value": 25.85,
+        "target": "金融 (XLF)",
+        "value": 38.28,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "公益・電力インフラ (XLU)",
+        "target": "中小型株 (IWM)",
+        "value": 47.39,
         "quality": "SHORT_COVER",
         "quality_color": "#F59E0B",
         "quality_label": "ショートカバー（空売りの買い戻し）"
@@ -2885,7 +2741,7 @@
       {
         "source": "公益・電力インフラ (XLU)",
         "target": "エネルギー (XLE)",
-        "value": 104.29,
+        "value": 46.49,
         "quality": "REAL_BUY",
         "quality_color": "#10B981",
         "quality_label": "本物のロング（買い集め）"
@@ -2893,7 +2749,7 @@
       {
         "source": "公益・電力インフラ (XLU)",
         "target": "現金・短期債 (SGOV)",
-        "value": 1.63,
+        "value": 0.83,
         "quality": "SHORT_COVER",
         "quality_color": "#F59E0B",
         "quality_label": "ショートカバー（空売りの買い戻し）"
@@ -2901,79 +2757,63 @@
       {
         "source": "公益・電力インフラ (XLU)",
         "target": "金 (Gold) (GLD)",
-        "value": 46.35,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 44.74,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "生活必需品 (XLP)",
-        "value": 29.09,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "エネルギー (XLE)",
-        "value": 126.37,
-        "quality": "REAL_BUY",
-        "quality_color": "#10B981",
-        "quality_label": "本物のロング（買い集め）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "現金・短期債 (SGOV)",
-        "value": 2.01,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "中小型株 (IWM)",
-        "target": "金 (Gold) (GLD)",
-        "value": 36.51,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "SaaS・ソフト (IGV)",
-        "value": 62.15,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "生活必需品 (XLP)",
-        "value": 24.39,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
-      },
-      {
-        "source": "米国20年超国債 (TLT)",
-        "target": "エネルギー (XLE)",
-        "value": 140.99,
+        "value": 49.82,
         "quality": "REAL_BUY",
         "quality_color": "#10B981",
         "quality_label": "本物のロング（買い集め）"
       },
       {
         "source": "米国20年超国債 (TLT)",
+        "target": "半導体・AI (SOXX)",
+        "value": 5.46,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "メガテック・IT (XLK)",
+        "value": 4.54,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "SaaS・ソフト (IGV)",
+        "value": 5.26,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "金融 (XLF)",
+        "value": 5.92,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "中小型株 (IWM)",
+        "value": 5.63,
+        "quality": "SHORT_COVER",
+        "quality_color": "#F59E0B",
+        "quality_label": "ショートカバー（空売りの買い戻し）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
+        "target": "エネルギー (XLE)",
+        "value": 4.85,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
+      },
+      {
+        "source": "米国20年超国債 (TLT)",
         "target": "現金・短期債 (SGOV)",
-        "value": 1.78,
+        "value": 0.73,
         "quality": "SHORT_COVER",
         "quality_color": "#F59E0B",
         "quality_label": "ショートカバー（空売りの買い戻し）"
@@ -2981,23 +2821,23 @@
       {
         "source": "米国20年超国債 (TLT)",
         "target": "金 (Gold) (GLD)",
-        "value": 32.73,
-        "quality": "SHORT_COVER",
-        "quality_color": "#F59E0B",
-        "quality_label": "ショートカバー（空売りの買い戻し）"
+        "value": 5.38,
+        "quality": "REAL_BUY",
+        "quality_color": "#10B981",
+        "quality_label": "本物のロング（買い集め）"
       }
     ],
     "sectors": {
       "SOXX": {
         "name": "半導体・AI",
-        "price_change": -43.04,
+        "price_change": 68.0,
         "oi_change": -4.3,
         "iv_change": 6.2,
         "short_vol_ratio": 61.6,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316",
-        "estimated_flow": 1394.5,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 2203.2,
         "components": [
           "NVDA",
           "AVGO",
@@ -3007,14 +2847,14 @@
       },
       "XLK": {
         "name": "メガテック・IT",
-        "price_change": -21.12,
-        "oi_change": -0.7,
-        "iv_change": -1.8,
-        "short_vol_ratio": 43.3,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316",
-        "estimated_flow": 684.29,
+        "price_change": 44.0,
+        "oi_change": 0.6,
+        "iv_change": 2.0,
+        "short_vol_ratio": 45.6,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981",
+        "estimated_flow": 1425.6,
         "components": [
           "AAPL",
           "MSFT",
@@ -3024,14 +2864,14 @@
       },
       "IGV": {
         "name": "SaaS・ソフト",
-        "price_change": 5.12,
+        "price_change": 8.16,
         "oi_change": -3.7,
         "iv_change": 5.8,
         "short_vol_ratio": 45.7,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー（空売りの買い戻し）",
         "quality_color": "#F59E0B",
-        "estimated_flow": 165.89,
+        "estimated_flow": 264.38,
         "components": [
           "CRM",
           "WDAY",
@@ -3042,14 +2882,14 @@
       },
       "XLV": {
         "name": "ヘルスケア",
-        "price_change": -4.88,
+        "price_change": -13.12,
         "oi_change": 4.1,
         "iv_change": -1.2,
         "short_vol_ratio": 32.5,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート殺到",
         "quality_color": "#EF4444",
-        "estimated_flow": 158.11,
+        "estimated_flow": 425.09,
         "components": [
           "LLY",
           "UNH",
@@ -3059,14 +2899,14 @@
       },
       "XLP": {
         "name": "生活必需品",
-        "price_change": 2.72,
-        "oi_change": 2.9,
-        "iv_change": 2.9,
-        "short_vol_ratio": 45.0,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B",
-        "estimated_flow": 88.13,
+        "price_change": -17.28,
+        "oi_change": 1.7,
+        "iv_change": 0.9,
+        "short_vol_ratio": 47.7,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444",
+        "estimated_flow": 559.87,
         "components": [
           "PG",
           "COST",
@@ -3076,14 +2916,14 @@
       },
       "XLF": {
         "name": "金融",
-        "price_change": -12.8,
-        "oi_change": 2.2,
-        "iv_change": -1.0,
-        "short_vol_ratio": 39.6,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444",
-        "estimated_flow": 414.72,
+        "price_change": 4.48,
+        "oi_change": -0.1,
+        "iv_change": 1.4,
+        "short_vol_ratio": 45.3,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 145.15,
         "components": [
           "JPM",
           "BAC",
@@ -3093,14 +2933,14 @@
       },
       "XLU": {
         "name": "公益・電力インフラ",
-        "price_change": -10.72,
+        "price_change": -4.48,
         "oi_change": 4.7,
         "iv_change": -1.2,
         "short_vol_ratio": 32.5,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート殺到",
         "quality_color": "#EF4444",
-        "estimated_flow": 347.33,
+        "estimated_flow": 145.15,
         "components": [
           "NEE",
           "CEG",
@@ -3110,28 +2950,28 @@
       },
       "IWM": {
         "name": "中小型株",
-        "price_change": -13.12,
-        "oi_change": 1.3,
-        "iv_change": 1.2,
-        "short_vol_ratio": 43.3,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート殺到",
-        "quality_color": "#EF4444",
-        "estimated_flow": 425.09,
+        "price_change": 11.12,
+        "oi_change": -2.3,
+        "iv_change": 1.4,
+        "short_vol_ratio": 46.0,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー（空売りの買い戻し）",
+        "quality_color": "#F59E0B",
+        "estimated_flow": 360.29,
         "components": [
           "IWM"
         ]
       },
       "XLE": {
         "name": "エネルギー",
-        "price_change": 15.04,
-        "oi_change": 0.7,
-        "iv_change": -1.2,
-        "short_vol_ratio": 40.7,
+        "price_change": 4.24,
+        "oi_change": 2.8,
+        "iv_change": -1.4,
+        "short_vol_ratio": 40.9,
         "quality": "REAL_BUY",
         "quality_label": "本物のロング（買い集め）",
         "quality_color": "#10B981",
-        "estimated_flow": 487.3,
+        "estimated_flow": 137.38,
         "components": [
           "XOM",
           "CVX",
@@ -3140,42 +2980,42 @@
       },
       "TLT": {
         "name": "米国20年超国債",
-        "price_change": -13.2,
-        "oi_change": -0.0,
-        "iv_change": 0.8,
-        "short_vol_ratio": 47.5,
-        "quality": "LONG_UNWIND",
-        "quality_label": "ロング投げ売り・利確",
-        "quality_color": "#F97316",
-        "estimated_flow": 427.68,
+        "price_change": -0.48,
+        "oi_change": 1.1,
+        "iv_change": -0.7,
+        "short_vol_ratio": 39.6,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート殺到",
+        "quality_color": "#EF4444",
+        "estimated_flow": 15.55,
         "components": [
           "TLT"
         ]
       },
       "SGOV": {
         "name": "現金・短期債",
-        "price_change": 0.16,
-        "oi_change": -0.8,
-        "iv_change": -0.2,
-        "short_vol_ratio": 43.3,
+        "price_change": 0.08,
+        "oi_change": -0.1,
+        "iv_change": 1.1,
+        "short_vol_ratio": 50.6,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー（空売りの買い戻し）",
         "quality_color": "#F59E0B",
-        "estimated_flow": 5.18,
+        "estimated_flow": 2.59,
         "components": [
           "SGOV"
         ]
       },
       "GLD": {
         "name": "金 (Gold)",
-        "price_change": 3.68,
-        "oi_change": -0.4,
-        "iv_change": 2.1,
-        "short_vol_ratio": 39.8,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー（空売りの買い戻し）",
-        "quality_color": "#F59E0B",
-        "estimated_flow": 119.23,
+        "price_change": 13.12,
+        "oi_change": 0.8,
+        "iv_change": -1.5,
+        "short_vol_ratio": 42.8,
+        "quality": "REAL_BUY",
+        "quality_label": "本物のロング（買い集め）",
+        "quality_color": "#10B981",
+        "estimated_flow": 425.09,
         "components": [
           "GLD"
         ]
@@ -3184,309 +3024,309 @@
     "stock_details": {
       "NVDA": {
         "sector": "XLK",
-        "price_change": -3.55,
-        "oi_change": 0.0,
-        "iv_change": -1.9,
-        "short_vol_ratio": 44.5,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
+        "price_change": 2.65,
+        "oi_change": 0.7,
+        "iv_change": 1.7,
+        "short_vol_ratio": 43.9,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
       },
       "AVGO": {
         "sector": "XLK",
-        "price_change": -2.78,
-        "oi_change": -1.4,
-        "iv_change": -2.3,
-        "short_vol_ratio": 43.7,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
+        "price_change": 4.73,
+        "oi_change": 0.7,
+        "iv_change": 2.4,
+        "short_vol_ratio": 47.3,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
       },
       "AMD": {
         "sector": "SOXX",
-        "price_change": -5.51,
-        "oi_change": -3.8,
-        "iv_change": 6.0,
-        "short_vol_ratio": 61.0,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
+        "price_change": 13.0,
+        "oi_change": -3.6,
+        "iv_change": 5.8,
+        "short_vol_ratio": 62.8,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
       },
       "TSM": {
         "sector": "SOXX",
-        "price_change": -4.5,
-        "oi_change": -3.6,
-        "iv_change": 6.1,
-        "short_vol_ratio": 62.8,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
+        "price_change": 7.64,
+        "oi_change": -5.2,
+        "iv_change": 6.6,
+        "short_vol_ratio": 62.4,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
       },
       "AAPL": {
         "sector": "XLK",
-        "price_change": -0.56,
-        "oi_change": -1.0,
-        "iv_change": -2.2,
-        "short_vol_ratio": 44.2,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
+        "price_change": -1.41,
+        "oi_change": 1.4,
+        "iv_change": 1.0,
+        "short_vol_ratio": 44.5,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
       },
       "MSFT": {
         "sector": "XLK",
-        "price_change": -0.71,
-        "oi_change": -0.8,
-        "iv_change": -1.6,
-        "short_vol_ratio": 44.8,
-        "quality": "LONG_UNWIND",
-        "quality_label": "利確・投げ"
+        "price_change": 15.51,
+        "oi_change": 1.4,
+        "iv_change": 2.8,
+        "short_vol_ratio": 45.6,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
       },
       "CRM": {
         "sector": "IGV",
-        "price_change": 3.79,
-        "oi_change": -4.0,
-        "iv_change": 5.2,
-        "short_vol_ratio": 47.4,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
+        "price_change": -4.07,
+        "oi_change": -3.9,
+        "iv_change": 5.1,
+        "short_vol_ratio": 45.3,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
       },
       "WDAY": {
         "sector": "IGV",
-        "price_change": 5.21,
+        "price_change": -5.89,
         "oi_change": -4.5,
-        "iv_change": 5.9,
-        "short_vol_ratio": 43.8,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
+        "iv_change": 6.2,
+        "short_vol_ratio": 46.6,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
       },
       "DDOG": {
         "sector": "IGV",
-        "price_change": 5.31,
-        "oi_change": -3.6,
-        "iv_change": 6.6,
-        "short_vol_ratio": 45.6,
+        "price_change": 1.65,
+        "oi_change": -3.9,
+        "iv_change": 5.4,
+        "short_vol_ratio": 47.4,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー"
       },
       "NET": {
         "sector": "IGV",
-        "price_change": 2.38,
-        "oi_change": -4.6,
-        "iv_change": 6.6,
-        "short_vol_ratio": 45.0,
+        "price_change": 4.81,
+        "oi_change": -3.9,
+        "iv_change": 4.8,
+        "short_vol_ratio": 46.9,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー"
       },
       "TEAM": {
         "sector": "IGV",
-        "price_change": 4.3,
-        "oi_change": -3.5,
-        "iv_change": 6.4,
-        "short_vol_ratio": 45.2,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
+        "price_change": -5.91,
+        "oi_change": -3.7,
+        "iv_change": 5.1,
+        "short_vol_ratio": 43.9,
+        "quality": "LONG_UNWIND",
+        "quality_label": "利確・投げ"
       },
       "LLY": {
         "sector": "XLV",
-        "price_change": -0.87,
-        "oi_change": 5.0,
-        "iv_change": -0.8,
-        "short_vol_ratio": 30.8,
+        "price_change": -4.55,
+        "oi_change": 4.8,
+        "iv_change": -2.0,
+        "short_vol_ratio": 32.2,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート"
       },
       "UNH": {
         "sector": "XLV",
-        "price_change": -1.92,
-        "oi_change": 3.2,
-        "iv_change": -0.8,
-        "short_vol_ratio": 32.5,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
+        "price_change": 0.21,
+        "oi_change": 3.3,
+        "iv_change": -1.5,
+        "short_vol_ratio": 31.2,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
       },
       "JNJ": {
         "sector": "XLV",
-        "price_change": -0.45,
-        "oi_change": 4.8,
-        "iv_change": -2.2,
-        "short_vol_ratio": 31.4,
+        "price_change": -3.66,
+        "oi_change": 5.0,
+        "iv_change": -1.7,
+        "short_vol_ratio": 34.4,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート"
       },
       "PFE": {
         "sector": "XLV",
-        "price_change": -0.4,
-        "oi_change": 3.3,
-        "iv_change": -0.5,
-        "short_vol_ratio": 31.2,
+        "price_change": -0.95,
+        "oi_change": 4.3,
+        "iv_change": -1.7,
+        "short_vol_ratio": 32.5,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート"
       },
       "PG": {
         "sector": "XLP",
-        "price_change": -1.87,
-        "oi_change": 2.5,
-        "iv_change": 2.0,
-        "short_vol_ratio": 43.3,
+        "price_change": -1.46,
+        "oi_change": 2.2,
+        "iv_change": -0.0,
+        "short_vol_ratio": 47.1,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート"
       },
       "COST": {
         "sector": "XLP",
-        "price_change": 0.77,
-        "oi_change": 3.2,
-        "iv_change": 2.3,
-        "short_vol_ratio": 46.4,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
+        "price_change": -2.04,
+        "oi_change": 2.0,
+        "iv_change": 0.1,
+        "short_vol_ratio": 49.4,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
       },
       "KO": {
         "sector": "XLP",
-        "price_change": 0.92,
-        "oi_change": 3.1,
-        "iv_change": 3.6,
-        "short_vol_ratio": 43.3,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
+        "price_change": -0.66,
+        "oi_change": 1.2,
+        "iv_change": 1.4,
+        "short_vol_ratio": 47.0,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
       },
       "PEP": {
         "sector": "XLP",
-        "price_change": 0.45,
-        "oi_change": 2.0,
-        "iv_change": 2.2,
+        "price_change": -2.3,
+        "oi_change": 1.3,
+        "iv_change": 0.4,
+        "short_vol_ratio": 47.5,
+        "quality": "NEW_SHORT",
+        "quality_label": "新規ショート"
+      },
+      "JPM": {
+        "sector": "XLF",
+        "price_change": 1.78,
+        "oi_change": -0.2,
+        "iv_change": 1.6,
+        "short_vol_ratio": 46.6,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "BAC": {
+        "sector": "XLF",
+        "price_change": 1.08,
+        "oi_change": -0.4,
+        "iv_change": 0.5,
+        "short_vol_ratio": 46.2,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "BRK.B": {
+        "sector": "XLF",
+        "price_change": 0.1,
+        "oi_change": -1.0,
+        "iv_change": 1.0,
+        "short_vol_ratio": 43.8,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
+      },
+      "C": {
+        "sector": "XLF",
+        "price_change": 4.08,
+        "oi_change": -0.5,
+        "iv_change": 0.5,
         "short_vol_ratio": 44.6,
         "quality": "SHORT_COVER",
         "quality_label": "ショートカバー"
       },
-      "JPM": {
-        "sector": "XLF",
-        "price_change": -3.53,
-        "oi_change": 1.4,
-        "iv_change": -0.1,
-        "short_vol_ratio": 38.1,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "BAC": {
-        "sector": "XLF",
-        "price_change": -2.48,
-        "oi_change": 1.3,
-        "iv_change": -1.4,
-        "short_vol_ratio": 39.7,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "BRK.B": {
-        "sector": "XLF",
-        "price_change": -0.63,
-        "oi_change": 1.8,
-        "iv_change": -0.6,
-        "short_vol_ratio": 37.8,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
-      "C": {
-        "sector": "XLF",
-        "price_change": -4.03,
-        "oi_change": 2.1,
-        "iv_change": -0.1,
-        "short_vol_ratio": 38.2,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
-      },
       "NEE": {
         "sector": "XLU",
-        "price_change": -0.92,
-        "oi_change": 5.4,
-        "iv_change": -1.1,
-        "short_vol_ratio": 33.2,
+        "price_change": -0.6,
+        "oi_change": 5.2,
+        "iv_change": -2.0,
+        "short_vol_ratio": 32.8,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート"
       },
       "CEG": {
         "sector": "XLU",
-        "price_change": -0.72,
-        "oi_change": 5.0,
-        "iv_change": -0.9,
-        "short_vol_ratio": 30.8,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
+        "price_change": 2.17,
+        "oi_change": 4.4,
+        "iv_change": -0.6,
+        "short_vol_ratio": 31.3,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
       },
       "DUK": {
         "sector": "XLU",
-        "price_change": -0.12,
-        "oi_change": 4.2,
-        "iv_change": -0.9,
-        "short_vol_ratio": 32.1,
+        "price_change": -2.18,
+        "oi_change": 4.0,
+        "iv_change": -1.4,
+        "short_vol_ratio": 31.3,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート"
       },
       "AEP": {
         "sector": "XLU",
-        "price_change": -2.72,
-        "oi_change": 4.0,
-        "iv_change": -2.0,
-        "short_vol_ratio": 33.0,
+        "price_change": -1.25,
+        "oi_change": 4.5,
+        "iv_change": -1.2,
+        "short_vol_ratio": 33.6,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート"
       },
       "IWM": {
         "sector": "IWM",
-        "price_change": -1.64,
-        "oi_change": 1.9,
-        "iv_change": 0.5,
-        "short_vol_ratio": 42.4,
-        "quality": "NEW_SHORT",
-        "quality_label": "新規ショート"
+        "price_change": 1.39,
+        "oi_change": -1.4,
+        "iv_change": 1.0,
+        "short_vol_ratio": 46.5,
+        "quality": "SHORT_COVER",
+        "quality_label": "ショートカバー"
       },
       "XOM": {
         "sector": "XLE",
-        "price_change": 2.42,
-        "oi_change": 0.3,
-        "iv_change": -1.9,
-        "short_vol_ratio": 39.4,
+        "price_change": 0.14,
+        "oi_change": 2.0,
+        "iv_change": -0.9,
+        "short_vol_ratio": 42.6,
         "quality": "REAL_BUY",
         "quality_label": "本物ロング"
       },
       "CVX": {
         "sector": "XLE",
-        "price_change": 2.28,
-        "oi_change": 0.7,
-        "iv_change": -2.2,
-        "short_vol_ratio": 40.9,
+        "price_change": 0.23,
+        "oi_change": 3.0,
+        "iv_change": -2.1,
+        "short_vol_ratio": 42.2,
         "quality": "REAL_BUY",
         "quality_label": "本物ロング"
       },
       "COP": {
         "sector": "XLE",
-        "price_change": 3.47,
-        "oi_change": 0.6,
-        "iv_change": -1.9,
-        "short_vol_ratio": 39.6,
+        "price_change": 0.82,
+        "oi_change": 1.8,
+        "iv_change": -0.8,
+        "short_vol_ratio": 42.0,
         "quality": "REAL_BUY",
         "quality_label": "本物ロング"
       },
       "TLT": {
         "sector": "TLT",
-        "price_change": -1.65,
-        "oi_change": 0.9,
-        "iv_change": 0.5,
-        "short_vol_ratio": 47.9,
+        "price_change": -0.06,
+        "oi_change": 0.3,
+        "iv_change": -1.7,
+        "short_vol_ratio": 39.2,
         "quality": "NEW_SHORT",
         "quality_label": "新規ショート"
       },
       "SGOV": {
         "sector": "SGOV",
-        "price_change": 0.02,
-        "oi_change": 0.0,
-        "iv_change": 0.1,
-        "short_vol_ratio": 44.0,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
+        "price_change": 0.01,
+        "oi_change": 0.1,
+        "iv_change": 0.6,
+        "short_vol_ratio": 51.7,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
       },
       "GLD": {
         "sector": "GLD",
-        "price_change": 0.46,
-        "oi_change": -0.8,
-        "iv_change": 2.1,
-        "short_vol_ratio": 40.5,
-        "quality": "SHORT_COVER",
-        "quality_label": "ショートカバー"
+        "price_change": 1.64,
+        "oi_change": 0.6,
+        "iv_change": -0.8,
+        "short_vol_ratio": 41.1,
+        "quality": "REAL_BUY",
+        "quality_label": "本物ロング"
       }
     },
     "ai_summary": "マスター、年初来のマクロ循環データだ。AI集中から実需・分散へのシフトが鮮明だ。"

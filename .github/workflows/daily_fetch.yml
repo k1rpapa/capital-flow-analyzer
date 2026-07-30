@@ -3,8 +3,8 @@ name: Daily CapitalFlow Market Fetch
 
 on:
   schedule:
-    # 日本時間 (JST) 午前6:00 = UTC 21:00 (前日)
-    - cron: '0 21 * * *'
+    # 日本時間 (JST) 午前6:15 = UTC 21:15 (前日) ※00分の混雑回避
+    - cron: '15 21 * * *'
   workflow_dispatch: # GitHubの画面から手動実行できるボタンも追加
 
 jobs:
