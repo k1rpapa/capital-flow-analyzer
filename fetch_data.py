@@ -1,7 +1,7 @@
 import os
 import json
 import random
-from datetime import datetime, timedelta
+from datetime import datetime, timezone, timedelta
 try:
     import yfinance as yf
     YFINANCE_AVAILABLE = True
@@ -225,9 +225,14 @@ def generate_analysis_data():
             ai_summary = f"マスター、当月の確証データだ。{top_gainer[1]['name']} への資金流入の質がファクトデータで裏付けられている。"
         else:
             ai_summary = f"マスター、年初来のマクロ循環データだ。大局的なセクター配置転換を注視すべきだ。"
-
-        now_jst = datetime.now().strftime("%Y-%m-%d %H:%M JST")
-        market_date_str = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+        
+        # 最終更新タイムスタンプの生成 (UTC+9のJSTタイムゾーンを明示計算)
+        jst = timezone(timedelta(hours=9))
+        now_jst_dt = datetime.now(jst)
+        now_jst = now_jst_dt.strftime("%Y-%m-%d %H:%M JST")
+        
+        # 米国市場確定日 (日本時間日付の前日)
+        market_date_str = (now_jst_dt - timedelta(days=1)).strftime("%Y-%m-%d")
 
         data_by_tf[tf] = {
             "last_updated": now_jst,
