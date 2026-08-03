@@ -33,7 +33,7 @@ body {
 }
 
 .app-container {
-    max-width: 1440px;
+    max-width: 1480px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -165,10 +165,10 @@ h1 {
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
-/* Dashboard Grid */
+/* Dashboard Grid (60/40 Split Top Row, Full Width Bottom Row) */
 .dashboard-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.15fr 0.85fr;
     gap: 1.25rem;
 }
 
@@ -195,40 +195,73 @@ h1 {
 }
 
 .card-header h2 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-/* Sankey Card Full Width */
+/* Sankey Card Left */
 .sankey-card {
-    grid-column: span 2;
+    grid-column: span 1;
 }
 
 .sankey-container {
     width: 100%;
-    height: 440px;
+    height: 480px;
+}
+
+/* Drilldown Card Right */
+.drilldown-card {
+    grid-column: span 1;
+}
+
+/* AI Card Bottom Full Width */
+.ai-card.full-width {
+    grid-column: span 2;
+}
+
+.ai-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.reset-ai-btn {
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    color: #60A5FA;
+    padding: 0.25rem 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.reset-ai-btn:hover {
+    background: rgba(59, 130, 246, 0.3);
+    color: #FFFFFF;
 }
 
 /* Legend */
 .legend-group {
     display: flex;
-    gap: 1rem;
-    font-size: 0.8rem;
+    gap: 0.8rem;
+    font-size: 0.78rem;
     color: var(--text-secondary);
 }
 
 .legend-item {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.3rem;
 }
 
 .badge {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     display: inline-block;
 }
@@ -290,6 +323,7 @@ h1 {
     position: relative;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     white-space: pre-wrap;
+    width: 100%;
 }
 
 /* Drill-down Panel */
@@ -299,39 +333,39 @@ h1 {
 }
 
 .drilldown-body {
-    min-height: 180px;
+    min-height: 220px;
 }
 
 .placeholder-text {
     color: var(--text-secondary);
     font-size: 0.9rem;
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 4rem 1rem;
 }
 
 .metrics-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.75rem;
-    margin-bottom: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
 }
 
 .metric-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border-color);
-    padding: 0.75rem;
+    padding: 0.65rem;
     border-radius: 10px;
     text-align: center;
 }
 
 .metric-label {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     color: var(--text-secondary);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.2rem;
 }
 
 .metric-value {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 700;
     font-family: var(--font-mono);
 }
@@ -340,11 +374,11 @@ h1 {
     width: 100%;
     border-collapse: collapse;
     margin-top: 0.5rem;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
 }
 
 .stock-table th, .stock-table td {
-    padding: 0.6rem 0.8rem;
+    padding: 0.5rem 0.6rem;
     text-align: left;
     border-bottom: 1px solid var(--border-color);
 }
@@ -357,7 +391,7 @@ h1 {
 .stock-badge {
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 600;
 }
 
@@ -455,7 +489,6 @@ h1 {
     margin: 0;
 }
 
-/* Allocation Logic Section */
 .logic-explanation {
     display: flex;
     flex-direction: column;
@@ -526,11 +559,11 @@ h1 {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .dashboard-grid {
         grid-template-columns: 1fr;
     }
-    .sankey-card {
+    .sankey-card, .drilldown-card, .ai-card.full-width {
         grid-column: span 1;
     }
     .metrics-grid, .fact-grid {

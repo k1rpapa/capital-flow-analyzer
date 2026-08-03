@@ -47,41 +47,44 @@
         <!-- Main Dashboard View -->
         <main class="dashboard-grid" id="dashboardView">
 
-            <!-- Top Row: Sankey Chart & Legend -->
+            <!-- Top Left: Sankey Chart & Legend (60% Width) -->
             <section class="card sankey-card">
                 <div class="card-header">
                     <h2><span class="dot live-dot"></span> 資金マネーフロー (Sankey Flow Diagram)</h2>
                     <div class="legend-group">
-                        <span class="legend-item"><span class="badge badge-real"></span> 本物ロング (新規買い)</span>
-                        <span class="legend-item"><span class="badge badge-short"></span> ショートカバー (買い戻し)</span>
-                        <span class="legend-item"><span class="badge badge-escape"></span> 安全避難 / 完全逃避</span>
+                        <span class="legend-item"><span class="badge badge-real"></span> 本物ロング</span>
+                        <span class="legend-item"><span class="badge badge-short"></span> ショートカバー</span>
+                        <span class="legend-item"><span class="badge badge-escape"></span> 安全避難</span>
                     </div>
                 </div>
                 <!-- Sankey Container -->
                 <div id="sankeyChart" class="sankey-container"></div>
             </section>
 
-            <!-- Bottom Left: Gemini AI Intelligence Panel -->
-            <section class="card ai-card">
+            <!-- Top Right: Sector & Individual Stock Drill-down Panel (40% Width) -->
+            <section class="card drilldown-card">
                 <div class="card-header">
-                    <h2><span class="ai-avatar">🤖</span> Gem相棒の冷徹なマーケット診断</h2>
-                    <span class="badge-status">FACTION ANALYSIS ACTIVE</span>
+                    <h2 id="drilldownTitle">🔍 判定詳細: <span style="color: #60A5FA;">選択中セクター</span></h2>
+                    <span class="hint-text">※サンキーのノードをクリック</span>
+                </div>
+                <div class="drilldown-body" id="drilldownBody">
+                    <p class="placeholder-text">上のサンキー・ダイアグラムの各セクター（例: IGV, SOXX）をクリックすると、詳細な4ファクト分析が表示されます。</p>
+                </div>
+            </section>
+
+            <!-- Bottom Full Width: Gemini AI Intelligence Panel (100% Width) -->
+            <section class="card ai-card full-width">
+                <div class="card-header">
+                    <h2><span class="ai-avatar">🤖</span> <span id="aiTitle">Gem相棒の冷徹なマーケット診断（全般マーケット）</span></h2>
+                    <div class="ai-controls">
+                        <button class="reset-ai-btn" id="resetAiBtn">🌐 全体診断に戻す</button>
+                        <span class="badge-status">FACTION ANALYSIS ACTIVE</span>
+                    </div>
                 </div>
                 <div class="ai-content">
                     <div class="ai-speech-bubble" id="aiSpeechText">
                         データを読み込み中...
                     </div>
-                </div>
-            </section>
-
-            <!-- Bottom Right: Sector & Individual Stock Drill-down Panel -->
-            <section class="card drilldown-card">
-                <div class="card-header">
-                    <h2 id="drilldownTitle">🔍 セクター詳細 / 構成銘柄の質 (Drill-down)</h2>
-                    <span class="hint-text">※サンキーのノードをクリックして切替</span>
-                </div>
-                <div class="drilldown-body" id="drilldownBody">
-                    <p class="placeholder-text">上のサンキー・ダイアグラムの各セクター（例: IGV, SOXX）をクリックすると、詳細な4ファクト分析が表示されます。</p>
                 </div>
             </section>
 
@@ -130,7 +133,7 @@
                     </div>
                 </article>
 
-                <!-- Section 3: Allocation Logic (Enhanced for Friends) -->
+                <!-- Section 3: Allocation Logic -->
                 <article class="manual-card">
                     <h3>🔀 3. サンキー・ダイアグラムの流出/流入マッチングロジック (配分モデル)</h3>
                     <p>「どうやって資金の流出元と流入先を紐づけ、帯の太さを計算しているのか？」という疑問に分かりやすくお答えします。</p>
@@ -176,7 +179,7 @@
                     <h3>🛠️ 4. データソースと処理概要 (Architecture)</h3>
                     <ul class="manual-list">
                         <li><strong>リアル株価・騰落率:</strong> Yahoo Finance (`yfinance`) より毎朝の米国市場確定値を自動取得。</li>
-                        <li><strong>自動バッチ処理 (GitHub Actions):</strong> 毎朝 JST 06:00 (日本時間) にクラウド上で自動起動し、最新データを全自動更新。</li>
+                        <li><strong>自動バッチ処理 (GitHub Actions):</strong> 毎朝 JST 06:15 (日本時間) にクラウド上で自動起動し、最新データを全自動更新。</li>
                         <li><strong>日次自前DB蓄積 (`history.json`):</strong> 毎日データが蓄積され、過去データとの比較による100%本物の建玉(OI)差分率を自動算出。</li>
                     </ul>
                 </article>
@@ -187,8 +190,8 @@
                     <ol class="manual-steps">
                         <li><strong>ステップ1: 時間軸を設定する</strong><br>画面右上の `[当日 (1D)]` `[当週 (1W)]` `[当月 (1M)]` `[年初来 (YTD)]` タブを切り替え、デイトレノイズから大マクロトレンドまで見たい期間を選択。</li>
                         <li><strong>ステップ2: サンキー・ダイアグラムの「太さ」と「色」を見る</strong><br>帯の太さで資金移動規模（$B）を、帯の色で「🟢本物買い」か「🟡ショートカバー」か「🔴現金逃避」かを確認。</li>
-                        <li><strong>ステップ3: Gem相棒の冷徹な解説を読む</strong><br>左下のAIカードで、プロのデスク目線で解読された「今飛びつくべきか、様子を見るべきか」の相場診断をチェック。</li>
-                        <li><strong>ステップ4: 各セクターノードをクリックしてドリルダウン</strong><br>サンキー上の各セクター（例: IGV, SOXX）をクリックし、右下パネルで構成銘柄（WDAY, CRM, NVDA等）の個別ファクト内訳を調査！</li>
+                        <li><strong>ステップ3: Gem相棒の冷徹な解説を読む</strong><br>下部のAIカードで相場診断をチェック。サンキーの各ETFノードをクリックすると、そのETF専用のAI診断に即時切り替え！</li>
+                        <li><strong>ステップ4: 右側パネルで4ファクト＆構成銘柄をドリルダウン調査</strong><br>右上パネルで構成銘柄（WDAY, CRM, NVDA等）の個別ファクト内訳を調査！</li>
                     </ol>
                 </article>
             </div>

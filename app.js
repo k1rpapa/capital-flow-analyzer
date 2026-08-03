@@ -1,6 +1,7 @@
 let currentData = null;
 let currentTf = "1D";
 let chartInstance = null;
+let selectedTicker = null;
 
 // アプリ起動時の初期化
 document.addEventListener("DOMContentLoaded", () => {
@@ -19,7 +20,7 @@ function initChart() {
     });
 }
 
-// JSONデータの読み込み (キャッシュ無効化パラメータ付与)
+// JSONデータの読み込み (キャッシュバスティング対応)
 async function loadData() {
     try {
         const response = await fetch("data.json?t=" + Date.now(), { cache: "no-store" });
@@ -69,20 +70,34 @@ function setupEventListeners() {
             e.target.classList.add("active");
 
             currentTf = e.target.getAttribute("data-tf");
+            selectedTicker = null; // リセット
             renderDashboard(currentTf);
         });
     });
 
-    // 3. サンキーノード/リンククリックイベント（ドリルダウン）
+    // 3. 全体AI診断リセットボタン
+    const resetAiBtn = document.getElementById("resetAiBtn");
+    if (resetAiBtn) {
+        resetAiBtn.addEventListener("click", () => {
+            selectedTicker = null;
+            renderAiSummary(currentTf);
+        });
+    }
+
+    // 4. サンキーノード/リンククリックイベント（ドリルダウン & 個別AI診断切替）
     chartInstance.on("click", (params) => {
         if (params.dataType === "node") {
             const ticker = params.data.ticker;
             if (ticker) {
+                selectedTicker = ticker;
                 renderDrilldown(ticker);
+                renderAiSummary(currentTf, ticker);
             } else {
                 const tickerMatch = params.data.name.match(/\(([^()]+)\)[^()]*$/);
                 if (tickerMatch && tickerMatch[1]) {
+                    selectedTicker = tickerMatch[1];
                     renderDrilldown(tickerMatch[1]);
+                    renderAiSummary(currentTf, tickerMatch[1]);
                 }
             }
         }
@@ -104,12 +119,31 @@ function renderDashboard(tf) {
     // 1. サンキーダイアグラムの描画
     renderSankey(tfData.nodes, tfData.links);
 
-    // 2. Gemini AI相棒解説の更新
-    document.getElementById("aiSpeechText").innerText = tfData.ai_summary;
+    // 2. Gemini AI相棒解説の更新 (全般または選択中個別)
+    renderAiSummary(tf, selectedTicker);
 
     // 3. デフォルトのドリルダウン（例: IGV）を表示
-    if (tfData.sectors["IGV"]) {
-        renderDrilldown("IGV");
+    const defaultTicker = selectedTicker || "IGV";
+    if (tfData.sectors[defaultTicker]) {
+        renderDrilldown(defaultTicker);
+    }
+}
+
+// AI相棒診断の描画（全体 vs 個別ETF切り替え）
+function renderAiSummary(tf, ticker = null) {
+    if (!currentData || !currentData[tf]) return;
+
+    const tfData = currentData[tf];
+    const aiTitleEl = document.getElementById("aiTitle");
+    const aiSpeechEl = document.getElementById("aiSpeechText");
+
+    if (ticker && tfData.sector_ai_summaries && tfData.sector_ai_summaries[ticker]) {
+        const sectorName = tfData.sectors[ticker] ? tfData.sectors[ticker].name : ticker;
+        aiTitleEl.innerHTML = `Gem相棒の冷徹なマーケット診断 <span style="color: #60A5FA;">（選択中: ${sectorName} [${ticker}]）</span>`;
+        aiSpeechEl.innerText = tfData.sector_ai_summaries[ticker];
+    } else {
+        aiTitleEl.innerText = "Gem相棒の冷徹なマーケット診断（全般マーケット）";
+        aiSpeechEl.innerText = tfData.ai_summary;
     }
 }
 
@@ -155,7 +189,7 @@ function renderSankey(nodes, links) {
                     return `
                         <div style="font-family: Inter, sans-serif; padding: 4px;">
                             <strong>${params.name}</strong><br/>
-                            クリックして個別銘柄をドリルダウン分析
+                            クリックして個別分析 ＆ AI診断を切り替え
                         </div>
                     `;
                 }
@@ -169,12 +203,12 @@ function renderSankey(nodes, links) {
                 emphasis: {
                     focus: "adjacency"
                 },
-                nodeWidth: 18,
-                nodeGap: 14,
+                nodeWidth: 16,
+                nodeGap: 12,
                 label: {
                     color: "#F3F4F6",
                     fontFamily: "Inter, sans-serif",
-                    fontSize: 12,
+                    fontSize: 11,
                     fontWeight: 600
                 },
                 lineStyle: {
@@ -220,7 +254,7 @@ function renderDrilldown(ticker) {
             </div>
             <div class="metric-card">
                 <div class="metric-label">判定結果 (Quality)</div>
-                <div class="metric-value" style="color: ${sectorInfo.quality_color}; font-size: 0.9rem;">${sectorInfo.quality_label}</div>
+                <div class="metric-value" style="color: ${sectorInfo.quality_color}; font-size: 0.85rem;">${sectorInfo.quality_label}</div>
             </div>
         </div>
     `;
@@ -246,7 +280,7 @@ function renderDrilldown(ticker) {
     });
 
     let tableHtml = `
-        <h4 style="font-size: 0.85rem; color: #9CA3AF; margin-top: 1rem; margin-bottom: 0.5rem;">構成主要銘柄の4ファクト内訳:</h4>
+        <h4 style="font-size: 0.8rem; color: #9CA3AF; margin-top: 0.8rem; margin-bottom: 0.4rem;">構成主要銘柄の4ファクト内訳:</h4>
         <table class="stock-table">
             <thead>
                 <tr>
