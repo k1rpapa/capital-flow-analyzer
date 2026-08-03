@@ -75,16 +75,17 @@ function setupEventListeners() {
         });
     });
 
-    // 3. 全体AI診断リセットボタン
+    // 3. 全体AI診断 & ニュースリセットボタン
     const resetAiBtn = document.getElementById("resetAiBtn");
     if (resetAiBtn) {
         resetAiBtn.addEventListener("click", () => {
             selectedTicker = null;
             renderAiSummary(currentTf);
+            renderNews(currentTf);
         });
     }
 
-    // 4. サンキーノード/リンククリックイベント（ドリルダウン & 個別AI診断切替）
+    // 4. サンキーノード/リンククリックイベント（ドリルダウン & 個別AI診断 & 個別ニュース切替）
     chartInstance.on("click", (params) => {
         if (params.dataType === "node") {
             const ticker = params.data.ticker;
@@ -92,12 +93,14 @@ function setupEventListeners() {
                 selectedTicker = ticker;
                 renderDrilldown(ticker);
                 renderAiSummary(currentTf, ticker);
+                renderNews(currentTf, ticker);
             } else {
                 const tickerMatch = params.data.name.match(/\(([^()]+)\)[^()]*$/);
                 if (tickerMatch && tickerMatch[1]) {
                     selectedTicker = tickerMatch[1];
                     renderDrilldown(tickerMatch[1]);
                     renderAiSummary(currentTf, tickerMatch[1]);
+                    renderNews(currentTf, tickerMatch[1]);
                 }
             }
         }
@@ -122,7 +125,10 @@ function renderDashboard(tf) {
     // 2. Gemini AI相棒解説の更新 (全般または選択中個別)
     renderAiSummary(tf, selectedTicker);
 
-    // 3. デフォルトのドリルダウン（例: IGV）を表示
+    // 3. ニュースエリアの描画 (全般または選択中個別5件)
+    renderNews(tf, selectedTicker);
+
+    // 4. デフォルトのドリルダウン（例: IGV）を表示
     const defaultTicker = selectedTicker || "IGV";
     if (tfData.sectors[defaultTicker]) {
         renderDrilldown(defaultTicker);
@@ -145,6 +151,49 @@ function renderAiSummary(tf, ticker = null) {
         aiTitleEl.innerText = "Gem相棒の冷徹なマーケット診断（全般マーケット）";
         aiSpeechEl.innerText = tfData.ai_summary;
     }
+}
+
+// ニュースセクションの描画 (Top 5 Headliners)
+function renderNews(tf, ticker = null) {
+    if (!currentData || !currentData[tf]) return;
+
+    const tfData = currentData[tf];
+    const newsListEl = document.getElementById("newsList");
+    const newsSubtitleEl = document.getElementById("newsSubtitle");
+
+    let newsItems = [];
+    let labelText = " - 市場全般";
+
+    if (ticker && tfData.sector_news && tfData.sector_news[ticker]) {
+        const sectorName = tfData.sectors[ticker] ? tfData.sectors[ticker].name : ticker;
+        labelText = ` - ${sectorName} (${ticker})`;
+        newsItems = tfData.sector_news[ticker];
+    } else if (tfData.sector_news) {
+        // 全体表示時は SOXX / IGV 等の主要セクターニュースを組み合わせ
+        newsItems = tfData.sector_news["SOXX"] || tfData.sector_news["IGV"] || [];
+    }
+
+    newsSubtitleEl.innerText = labelText;
+
+    if (!newsItems || newsItems.length === 0) {
+        newsListEl.innerHTML = `<li class="news-placeholder">現在表示できるニュースはありません。</li>`;
+        return;
+    }
+
+    let html = "";
+    newsItems.slice(0, 5).forEach(item => {
+        html += `
+            <li class="news-item">
+                <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="news-link">
+                    <span>📰</span>
+                    <span>${item.title}</span>
+                </a>
+                <span class="news-publisher">${item.publisher || 'Finance News'}</span>
+            </li>
+        `;
+    });
+
+    newsListEl.innerHTML = html;
 }
 
 // ECharts サンキーダイアグラムの描画
@@ -189,7 +238,7 @@ function renderSankey(nodes, links) {
                     return `
                         <div style="font-family: Inter, sans-serif; padding: 4px;">
                             <strong>${params.name}</strong><br/>
-                            クリックして個別分析 ＆ AI診断を切り替え
+                            クリックして個別分析 ＆ ニュース切替
                         </div>
                     `;
                 }
