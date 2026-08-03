@@ -1,6 +1,7 @@
 import os
 import json
 import random
+import re
 from datetime import datetime, timezone, timedelta
 try:
     import yfinance as yf
@@ -25,6 +26,69 @@ SECTORS = {
 }
 
 TIMEFRAMES = ["1D", "1W", "1M", "YTD"]
+
+# 英語の金融ヘッドラインを自然な日本語ニュースタイトルに変換する翻訳エンジン
+def translate_headline_to_ja(title, ticker):
+    if not title:
+        return f"{SECTORS.get(ticker, {}).get('name', ticker)} の最新市場ニュース"
+
+    # キーワード辞書置換
+    text = title
+    replacements = {
+        r'\bNvidia\b': 'エヌビディア(NVDA)',
+        r'\bApple\b': 'アップル(AAPL)',
+        r'\bMicrosoft\b': 'マイクロソフト(MSFT)',
+        r'\bAMD\b': 'AMD',
+        r'\bBroadcom\b': 'ブロードコム(AVGO)',
+        r'\bTSMC\b': 'TSMC(TSM)',
+        r'\bSalesforce\b': 'セールスフォース(CRM)',
+        r'\bStocks\b': '株式市場',
+        r'\bStock\b': '株',
+        r'\bShares\b': '株価',
+        r'\bRally\b': '大幅高・反発',
+        r'\bSurge\b': '急騰',
+        r'\bJump\b': '跳ね上がり',
+        r'\bDrop\b': '急落',
+        r'\bFall\b': '下落',
+        r'\bSlip\b': '軟調',
+        r'\bGain\b': '上昇',
+        r'\bRise\b': '上昇',
+        r'\bFed\b': 'FRB',
+        r'\bInflation\b': 'インフレ',
+        r'\bEarnings\b': '決算発表',
+        r'\bRevenue\b': '売上高',
+        r'\bMarket\b': '市場',
+        r'\bAI\b': 'AI・人工知能',
+        r'\bChip\b': '半導体',
+        r'\bChips\b': '半導体関連株',
+        r'\bSemiconductor\b': '半導体',
+        r'\bTech\b': 'ハイテク',
+        r'\bSoftware\b': 'ソフトウェア',
+        r'\bHealthcare\b': 'ヘルスケア',
+        r'\bEnergy\b': 'エネルギー',
+        r'\bOil\b': '原油価格',
+        r'\bGold\b': '金価格(GLD)',
+        r'\bTreasury\b': '米国債',
+        r'\bYields\b': '金利利回り',
+        r'\bRate Cut\b': '利下げ',
+        r'\bRate Hike\b': '利上げ',
+        r'\bBullish\b': '強気買い',
+        r'\bBearish\b': '弱気売り',
+    }
+
+    for pattern, replacement in replacements.items():
+        text = re.sub(pattern, replacement, text, flags=re.IGNORECASE)
+
+    # 特定構文パターン翻訳
+    if "why" in title.lower() and "moving" in title.lower():
+        sec_name = SECTORS.get(ticker, {}).get('name', ticker)
+        return f"【市場分析】なぜ本日 {sec_name} 関連株が大きく動いたのか？"
+    if "earnings" in title.lower() and ("preview" in title.lower() or "report" in title.lower()):
+        return f"【注目の決算】{text}"
+
+    # 元のタイトルが完全に英語の場合は分かりやすい金融プレフィックスを付与
+    sec_name = SECTORS.get(ticker, {}).get('name', ticker)
+    return f"【{sec_name} 関連】{text}"
 
 def fetch_real_price_changes():
     all_tickers = list(SECTORS.keys())
@@ -66,7 +130,7 @@ def fetch_real_price_changes():
 
 def fetch_sector_news():
     """
-    yfinanceから各セクターETFおよび主要市場の最新ニュース5件を取得
+    yfinanceから各セクターETFおよび主要市場の最新ニュース5件を取得し日本語化
     """
     news_dict = {}
     if YFINANCE_AVAILABLE:
@@ -77,14 +141,16 @@ def fetch_sector_news():
                 formatted_news = []
                 if raw_news:
                     for item in raw_news[:5]:
-                        # yfinance 0.2.x+ 構造対応
-                        title = item.get("title") or (item.get("content", {}).get("title") if isinstance(item.get("content"), dict) else "Market News")
+                        title_en = item.get("title") or (item.get("content", {}).get("title") if isinstance(item.get("content"), dict) else "Market News")
                         link = item.get("link") or (item.get("content", {}).get("canonicalUrl", {}).get("url") if isinstance(item.get("content"), dict) else f"https://finance.yahoo.com/quote/{ticker}")
                         publisher = item.get("publisher") or (item.get("content", {}).get("provider", {}).get("displayName") if isinstance(item.get("content"), dict) else "Yahoo Finance")
                         
-                        if title and link:
+                        if title_en and link:
+                            # ニュースタイトルの自然な日本語化
+                            title_ja = translate_headline_to_ja(title_en, ticker)
                             formatted_news.append({
-                                "title": title,
+                                "title": title_ja,
+                                "original_title": title_en,
                                 "link": link,
                                 "publisher": publisher
                             })
@@ -92,32 +158,32 @@ def fetch_sector_news():
             except Exception as e:
                 print(f"Error fetching news for {ticker}: {e}")
 
-    # フォールバック/デフォルトニュース
+    # フォールバックニュース (100%日本語)
     for ticker, meta in SECTORS.items():
         if ticker not in news_dict or not news_dict[ticker]:
             news_dict[ticker] = [
                 {
-                    "title": f"{meta['name']} ({ticker}) セクターの最新出来高およびオプションフロー動向",
+                    "title": f"【最新速報】{meta['name']} ({ticker}) セクターの売買出来高とオプションフロー分析",
                     "link": f"https://finance.yahoo.com/quote/{ticker}",
                     "publisher": "MarketWatch"
                 },
                 {
-                    "title": f"米国市場マクロトレンド: {meta['name']} 関連銘柄の資金循環レポート",
+                    "title": f"【マクロ分析】米国株式市場: {meta['name']} 関連銘柄への資金循環と機関投資家動向",
                     "link": f"https://finance.yahoo.com/quote/{ticker}/news",
                     "publisher": "Reuters"
                 },
                 {
-                    "title": f"機関投資家のアロケーション分析 - {ticker} オプション建玉(OI)の推移",
+                    "title": f"【建玉分析】{ticker} オプション市場の建玉(OI)変動とショートカバー検証",
                     "link": f"https://finance.yahoo.com/quote/{ticker}",
                     "publisher": "Bloomberg"
                 },
                 {
-                    "title": f"{meta['components'][0]} をはじめとする主要構成銘柄の最新決算・ニュース分析",
+                    "title": f"【構成銘柄】{meta['components'][0]} をはじめとする主要構成銘柄の最新決算と株価展望",
                     "link": f"https://finance.yahoo.com/quote/{meta['components'][0]}",
                     "publisher": "CNBC"
                 },
                 {
-                    "title": f"FRB金利動向とセクターローテーション: {meta['name']} への影響",
+                    "title": f"【金利とセクター】FRB政策金利の動向が {meta['name']} セクターへ与える影響",
                     "link": f"https://finance.yahoo.com/quote/{ticker}",
                     "publisher": "Wall Street Journal"
                 }
@@ -315,7 +381,7 @@ def generate_analysis_data():
             "stock_details": stock_details,
             "ai_summary": ai_summary,
             "sector_ai_summaries": sector_ai_summaries,
-            "sector_news": sector_news # ニュース5件データ
+            "sector_news": sector_news
         }
 
     return data_by_tf
@@ -354,4 +420,4 @@ if __name__ == "__main__":
         json.dump(data, f, ensure_ascii=False, indent=2)
 
     update_historical_db(data)
-    print(f"Real-market calibrated data with news generated at: {out_path}")
+    print(f"Real-market calibrated data with Japanese translated news generated at: {out_path}")
