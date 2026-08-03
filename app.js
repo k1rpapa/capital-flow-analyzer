@@ -19,10 +19,10 @@ function initChart() {
     });
 }
 
-// JSONデータの読み込み
+// JSONデータの読み込み (キャッシュ無効化パラメータ付与)
 async function loadData() {
     try {
-        const response = await fetch("data.json");
+        const response = await fetch("data.json?t=" + Date.now(), { cache: "no-store" });
         currentData = await response.json();
         renderDashboard(currentTf);
     } catch (error) {
