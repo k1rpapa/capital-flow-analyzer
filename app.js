@@ -169,7 +169,6 @@ function renderNews(tf, ticker = null) {
         labelText = ` - ${sectorName} (${ticker})`;
         newsItems = tfData.sector_news[ticker];
     } else if (tfData.sector_news) {
-        // 全体表示時は SOXX / IGV 等の主要セクターニュースを組み合わせ
         newsItems = tfData.sector_news["SOXX"] || tfData.sector_news["IGV"] || [];
     }
 
@@ -196,8 +195,10 @@ function renderNews(tf, ticker = null) {
     newsListEl.innerHTML = html;
 }
 
-// ECharts サンキーダイアグラムの描画
+// ECharts サンキーダイアグラムの描画（全天候型崩れ防御処理）
 function renderSankey(nodes, links) {
+    if (!nodes || nodes.length === 0) return;
+
     const formattedNodes = nodes.map(n => ({
         name: n.name,
         ticker: n.ticker,
@@ -210,16 +211,23 @@ function renderSankey(nodes, links) {
         }
     }));
 
-    const formattedLinks = links.map(l => ({
-        source: l.source,
-        target: l.target,
-        value: l.value,
-        lineStyle: {
-            color: l.quality_color,
-            opacity: 0.35,
-            curveness: 0.5
-        }
-    }));
+    // リンクの検証・セーフティフィルター
+    const validNodeNames = new Set(nodes.map(n => n.name));
+    const formattedLinks = (links || [])
+        .filter(l => validNodeNames.has(l.source) && validNodeNames.has(l.target) && l.source !== l.target)
+        .map(l => ({
+            source: l.source,
+            target: l.target,
+            value: Math.max(l.value || 0.1, 0.1),
+            quality: l.quality,
+            quality_color: l.quality_color || "#3B82F6",
+            quality_label: l.quality_label || '',
+            lineStyle: {
+                color: l.quality_color || "#3B82F6",
+                opacity: 0.38,
+                curveness: 0.5
+            }
+        }));
 
     const option = {
         tooltip: {
@@ -252,8 +260,10 @@ function renderSankey(nodes, links) {
                 emphasis: {
                     focus: "adjacency"
                 },
-                nodeWidth: 16,
-                nodeGap: 12,
+                orient: "horizontal",
+                nodeWidth: 18,
+                nodeGap: 14,
+                layoutIterations: 32,
                 label: {
                     color: "#F3F4F6",
                     fontFamily: "Inter, sans-serif",

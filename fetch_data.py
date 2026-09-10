@@ -83,14 +83,10 @@ def fetch_real_price_changes():
     return real_data
 
 def fetch_sector_news():
-    """
-    yfinanceから各セクターETFの最新ニュース5件を取得し、全文を自然な日本語に100%全翻訳
-    """
     news_dict = {}
     if YFINANCE_AVAILABLE:
         for ticker in SECTORS.keys():
             try:
-                print(f"Fetching & translating news for sector {ticker}...")
                 t_obj = yf.Ticker(ticker)
                 raw_news = t_obj.news
                 formatted_news = []
@@ -101,7 +97,6 @@ def fetch_sector_news():
                         publisher = item.get("publisher") or (item.get("content", {}).get("provider", {}).get("displayName") if isinstance(item.get("content"), dict) else "Yahoo Finance")
                         
                         if title_en and link:
-                            # ニュースタイトル全文を自然な日本語に翻訳
                             title_ja = translate_to_japanese(title_en)
                             formatted_news.append({
                                 "title": title_ja,
@@ -113,7 +108,6 @@ def fetch_sector_news():
             except Exception as e:
                 print(f"Error fetching news for {ticker}: {e}")
 
-    # フォールバックニュース
     for ticker, meta in SECTORS.items():
         if ticker not in news_dict or not news_dict[ticker]:
             news_dict[ticker] = [
@@ -201,7 +195,7 @@ def generate_analysis_data():
                     quality_label = "ロング投げ売り・利確"
                     quality_color = "#F97316"
 
-            estimated_flow = round(abs(price_change) * 1.8 * multiplier, 2)
+            estimated_flow = round(max(abs(price_change), 0.1) * 1.8 * multiplier, 2)
 
             sector_status[ticker] = {
                 "name": meta["name"],
@@ -263,23 +257,32 @@ def generate_analysis_data():
                     "quality_label": c_qual_label
                 }
 
+        # サンキーリンクの堅牢・全天候型マッチングエンジン
         outflows = [t for t, s in sector_status.items() if s["price_change"] < 0]
         inflows = [t for t, s in sector_status.items() if s["price_change"] >= 0]
+
+        # 🔥 全面高（inflowsのみ）または 全面安（outflowsのみ）の全天候安全ガード
+        if not outflows or not inflows:
+            # 騰落率で全セクターをソート
+            sorted_by_price = sorted(sector_status.items(), key=lambda x: x[1]["price_change"])
+            # 下位半分を流出扱い、上位半分を流入扱いにして相対フローを可視化
+            half_len = max(1, len(sorted_by_price) // 2)
+            outflows = [t for t, s in sorted_by_price[:half_len]]
+            inflows = [t for t, s in sorted_by_price[half_len:]]
 
         for out_t in outflows:
             out_s = sector_status[out_t]
             for in_t in inflows:
                 in_s = sector_status[in_t]
-                flow_val = round(min(out_s["estimated_flow"], in_s["estimated_flow"]) * random.uniform(0.25, 0.4), 2)
-                if flow_val > 0.05:
-                    links.append({
-                        "source": f"{out_s['name']} ({out_t})",
-                        "target": f"{in_s['name']} ({in_t})",
-                        "value": flow_val,
-                        "quality": in_s["quality"],
-                        "quality_color": in_s["quality_color"],
-                        "quality_label": in_s["quality_label"]
-                    })
+                flow_val = round(max(min(out_s["estimated_flow"], in_s["estimated_flow"]) * random.uniform(0.3, 0.5), 0.15), 2)
+                links.append({
+                    "source": f"{out_s['name']} ({out_t})",
+                    "target": f"{in_s['name']} ({in_t})",
+                    "value": flow_val,
+                    "quality": in_s["quality"],
+                    "quality_color": in_s["quality_color"],
+                    "quality_label": in_s["quality_label"]
+                })
 
         for ticker, s in sector_status.items():
             nodes.append({
@@ -375,4 +378,4 @@ if __name__ == "__main__":
         json.dump(data, f, ensure_ascii=False, indent=2)
 
     update_historical_db(data)
-    print(f"Real-market calibrated data with fully translated Japanese news generated at: {out_path}")
+    print(f"Real-market calibrated data with fallback robust links generated at: {out_path}")
