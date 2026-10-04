@@ -1,0 +1,39 @@
+﻿# GitHub Pages へ静的ファイルを公開する。コード変更時(push)・手動・日次取得後(workflow_call)に動く。
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+    paths: ['index.html', 'app.js', 'macro.js', 'styles.css', 'data.json', 'macro.json']
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - name: Stage public files only
+        run: |
+          mkdir site
+          cp index.html app.js macro.js styles.css data.json macro.json site/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

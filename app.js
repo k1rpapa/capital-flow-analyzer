@@ -37,6 +37,7 @@ function setupEventListeners() {
     const viewBtns = document.querySelectorAll("#viewTabs .nav-btn");
     const dashboardView = document.getElementById("dashboardView");
     const manualView = document.getElementById("manualView");
+    const macroView = document.getElementById("macroView");
     const timeframeTabs = document.getElementById("timeframeTabs");
 
     viewBtns.forEach(btn => {
@@ -45,13 +46,16 @@ function setupEventListeners() {
             e.target.classList.add("active");
 
             const view = e.target.getAttribute("data-view");
-            if (view === "manual") {
+            if (view === "manual" || view === "macro") {
                 dashboardView.classList.add("hidden");
-                manualView.classList.remove("hidden");
+                manualView.classList.toggle("hidden", view !== "manual");
+                macroView.classList.toggle("hidden", view !== "macro");
                 timeframeTabs.style.opacity = "0.3";
                 timeframeTabs.style.pointerEvents = "none";
+                if (view === "macro") loadMacro();
             } else {
                 manualView.classList.add("hidden");
+                macroView.classList.add("hidden");
                 dashboardView.classList.remove("hidden");
                 timeframeTabs.style.opacity = "1";
                 timeframeTabs.style.pointerEvents = "auto";

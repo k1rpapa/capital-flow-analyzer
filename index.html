@@ -31,6 +31,7 @@
                 <!-- Navigation Tabs (Dashboard vs Manual) -->
                 <div class="view-tabs" id="viewTabs">
                     <button class="nav-btn active" data-view="dashboard">📊 ダッシュボード</button>
+                    <button class="nav-btn" data-view="macro">🌐 市場俯瞰</button>
                     <button class="nav-btn" data-view="manual">📖 マニュアル & コンセプト</button>
                 </div>
 
@@ -96,6 +97,15 @@
                 </div>
             </section>
 
+        </main>
+
+        <!-- Macro Overview View (Hidden by default) -->
+        <main class="macro-container card hidden" id="macroView">
+            <div class="manual-header">
+                <h2>🌐 米国市場 俯瞰ダッシュボード</h2>
+                <p>割高感・市場の広がり・信用・景気・金利・エネルギーを指標ごとに長期推移と歴史的レンジで確認します。判断は総合スコアではなく各指標の定義・注意点とあわせて行ってください。</p>
+            </div>
+            <div id="macroContent" aria-live="polite"></div>
         </main>
 
         <!-- Manual & Concept View (Hidden by default) -->
@@ -211,6 +221,7 @@
         </footer>
     </div>
 
+    <script src="macro.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

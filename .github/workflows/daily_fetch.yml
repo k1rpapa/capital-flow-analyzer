@@ -33,9 +33,24 @@ jobs:
         run: |
           python fetch_data.py
 
+      - name: Run macro overview fetch
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+        run: |
+          python fetch_macro.py
+
       - name: Commit and push updated data
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
-          git add data.json history.json || true
+          git add data.json history.json macro.json || true
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update market data & history [JST 06:00]" && git push)
+
+  deploy-pages:
+    needs: fetch-and-update
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml
